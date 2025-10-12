@@ -1,0 +1,27 @@
+[0.040s] Invoking command in '/home/leoxia/Code/XJTU-RMV-Task05/src/build/hik_camera': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/leoxia/Code/XJTU-RMV-Task05/src/build/hik_camera -- -j4 -l4
+[0.174s] [35m[1mConsolidate compiler generated dependencies of target hik_camera_node[0m
+[0.244s] [ 33%] [32mBuilding CXX object CMakeFiles/hik_camera_node.dir/src/hik_camera_driver.cpp.o[0m
+[3.553s] [ 66%] [32m[1mLinking CXX executable hik_camera_node[0m
+[4.356s] [100%] Built target hik_camera_node
+[4.380s] Invoked command in '/home/leoxia/Code/XJTU-RMV-Task05/src/build/hik_camera' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/leoxia/Code/XJTU-RMV-Task05/src/build/hik_camera -- -j4 -l4
+[4.384s] Invoking command in '/home/leoxia/Code/XJTU-RMV-Task05/src/build/hik_camera': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/leoxia/Code/XJTU-RMV-Task05/src/build/hik_camera
+[4.403s] -- Install configuration: ""
+[4.405s] -- Execute custom install script
+[4.405s] -- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/src/install/hik_camera/lib/hik_camera/hik_camera_node
+[4.405s] -- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/src/install/hik_camera/share/hik_camera/launch/launch.py
+[4.406s] -- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/src/install/hik_camera/share/ament_index/resource_index/package_run_dependencies/hik_camera
+[4.406s] -- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/src/install/hik_camera/share/ament_index/resource_index/parent_prefix_path/hik_camera
+[4.407s] -- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/src/install/hik_camera/share/hik_camera/environment/ament_prefix_path.sh
+[4.407s] -- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/src/install/hik_camera/share/hik_camera/environment/ament_prefix_path.dsv
+[4.407s] -- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/src/install/hik_camera/share/hik_camera/environment/path.sh
+[4.407s] -- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/src/install/hik_camera/share/hik_camera/environment/path.dsv
+[4.407s] -- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/src/install/hik_camera/share/hik_camera/local_setup.bash
+[4.407s] -- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/src/install/hik_camera/share/hik_camera/local_setup.sh
+[4.407s] -- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/src/install/hik_camera/share/hik_camera/local_setup.zsh
+[4.408s] -- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/src/install/hik_camera/share/hik_camera/local_setup.dsv
+[4.408s] -- Symlinking: /home/leoxia/Code/XJTU-RMV-Task05/src/install/hik_camera/share/hik_camera/package.dsv
+[4.426s] -- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/src/install/hik_camera/share/ament_index/resource_index/packages/hik_camera
+[4.426s] -- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/src/install/hik_camera/share/hik_camera/cmake/hik_cameraConfig.cmake
+[4.427s] -- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/src/install/hik_camera/share/hik_camera/cmake/hik_cameraConfig-version.cmake
+[4.427s] -- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/src/install/hik_camera/share/hik_camera/package.xml
+[4.431s] Invoked command in '/home/leoxia/Code/XJTU-RMV-Task05/src/build/hik_camera' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/leoxia/Code/XJTU-RMV-Task05/src/build/hik_camera

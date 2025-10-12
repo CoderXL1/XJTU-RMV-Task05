@@ -1,0 +1,27 @@
+[0.021s] Invoking command in '/home/leoxia/Code/XJTU-RMV-Task05/src/build/detect_and_solve': /usr/bin/cmake --build /home/leoxia/Code/XJTU-RMV-Task05/src/build/detect_and_solve -- -j4 -l4
+[0.095s] [35m[1mConsolidate compiler generated dependencies of target detect_and_solve[0m
+[0.129s] [100%] Built target detect_and_solve
+[0.150s] Invoked command in '/home/leoxia/Code/XJTU-RMV-Task05/src/build/detect_and_solve' returned '0': /usr/bin/cmake --build /home/leoxia/Code/XJTU-RMV-Task05/src/build/detect_and_solve -- -j4 -l4
+[0.169s] Invoking command in '/home/leoxia/Code/XJTU-RMV-Task05/src/build/detect_and_solve': /usr/bin/cmake --install /home/leoxia/Code/XJTU-RMV-Task05/src/build/detect_and_solve
+[0.181s] -- Install configuration: ""
+[0.182s] -- Installing: /home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/lib/detect_and_solve/detect_and_solve
+[0.186s] -- Set runtime path of "/home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/lib/detect_and_solve/detect_and_solve" to ""
+[0.186s] -- Installing: /home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/include
+[0.186s] -- Installing: /home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/include/detect_and_solve
+[0.186s] -- Installing: /home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/share/detect_and_solve/launch
+[0.186s] -- Installing: /home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/share/ament_index/resource_index/package_run_dependencies/detect_and_solve
+[0.187s] -- Installing: /home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/share/ament_index/resource_index/parent_prefix_path/detect_and_solve
+[0.187s] -- Installing: /home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/share/detect_and_solve/environment/ament_prefix_path.sh
+[0.187s] -- Installing: /home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/share/detect_and_solve/environment/ament_prefix_path.dsv
+[0.187s] -- Installing: /home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/share/detect_and_solve/environment/path.sh
+[0.188s] -- Installing: /home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/share/detect_and_solve/environment/path.dsv
+[0.188s] -- Installing: /home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/share/detect_and_solve/local_setup.bash
+[0.188s] -- Installing: /home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/share/detect_and_solve/local_setup.sh
+[0.188s] -- Installing: /home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/share/detect_and_solve/local_setup.zsh
+[0.188s] -- Installing: /home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/share/detect_and_solve/local_setup.dsv
+[0.189s] -- Installing: /home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/share/detect_and_solve/package.dsv
+[0.189s] -- Installing: /home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/share/ament_index/resource_index/packages/detect_and_solve
+[0.189s] -- Installing: /home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/share/detect_and_solve/cmake/detect_and_solveConfig.cmake
+[0.189s] -- Installing: /home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/share/detect_and_solve/cmake/detect_and_solveConfig-version.cmake
+[0.190s] -- Installing: /home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/share/detect_and_solve/package.xml
+[0.193s] Invoked command in '/home/leoxia/Code/XJTU-RMV-Task05/src/build/detect_and_solve' returned '0': /usr/bin/cmake --install /home/leoxia/Code/XJTU-RMV-Task05/src/build/detect_and_solve

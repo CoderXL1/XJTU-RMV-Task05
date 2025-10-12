@@ -1,0 +1,56 @@
+[0.031s] Invoking command in '/home/leoxia/Code/XJTU-RMV-Task05/src/build/detect_and_solve': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/leoxia/Code/XJTU-RMV-Task05/src/build/detect_and_solve -- -j4 -l4
+[0.144s] [ 33%] [32mBuilding CXX object CMakeFiles/detect_and_solve.dir/src/node.cpp.o[0m
+[6.234s] [01m[K/home/leoxia/Code/XJTU-RMV-Task05/src/detect_and_solve/src/node.cpp:[m[K In member function ‘[01m[Kbool DetectorAndSolver::solve_pnp(cv::RotatedRect&, cv::Mat)[m[K’:
+[6.234s] [01m[K/home/leoxia/Code/XJTU-RMV-Task05/src/detect_and_solve/src/node.cpp:161:12:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[K((- w) / (double)2)[m[K’ from ‘[01m[Kdouble[m[K’ to ‘[01m[Kfloat[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnarrowing-Wnarrowing]8;;[m[K]
+[6.234s]   161 |         {[01;35m[K-w/2[m[K, -h/2, 0},
+[6.235s]       |          [01;35m[K~~^~[m[K
+[6.235s] [01m[K/home/leoxia/Code/XJTU-RMV-Task05/src/detect_and_solve/src/node.cpp:161:18:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[K((- h) / (double)2)[m[K’ from ‘[01m[Kdouble[m[K’ to ‘[01m[Kfloat[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnarrowing-Wnarrowing]8;;[m[K]
+[6.235s]   161 |         {-w/2, [01;35m[K-h/2[m[K, 0},
+[6.235s]       |                [01;35m[K~~^~[m[K
+[6.235s] [01m[K/home/leoxia/Code/XJTU-RMV-Task05/src/detect_and_solve/src/node.cpp:162:12:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[K(((double)w) / (double)2)[m[K’ from ‘[01m[Kdouble[m[K’ to ‘[01m[Kfloat[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnarrowing-Wnarrowing]8;;[m[K]
+[6.235s]   162 |         { [01;35m[Kw/2[m[K, -h/2, 0},
+[6.235s]       |           [01;35m[K~^~[m[K
+[6.235s] [01m[K/home/leoxia/Code/XJTU-RMV-Task05/src/detect_and_solve/src/node.cpp:162:18:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[K((- h) / (double)2)[m[K’ from ‘[01m[Kdouble[m[K’ to ‘[01m[Kfloat[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnarrowing-Wnarrowing]8;;[m[K]
+[6.236s]   162 |         { w/2, [01;35m[K-h/2[m[K, 0},
+[6.236s]       |                [01;35m[K~~^~[m[K
+[6.236s] [01m[K/home/leoxia/Code/XJTU-RMV-Task05/src/detect_and_solve/src/node.cpp:163:12:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[K(((double)w) / (double)2)[m[K’ from ‘[01m[Kdouble[m[K’ to ‘[01m[Kfloat[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnarrowing-Wnarrowing]8;;[m[K]
+[6.236s]   163 |         { [01;35m[Kw/2[m[K,  h/2, 0},
+[6.237s]       |           [01;35m[K~^~[m[K
+[6.237s] [01m[K/home/leoxia/Code/XJTU-RMV-Task05/src/detect_and_solve/src/node.cpp:163:18:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[K(((double)h) / (double)2)[m[K’ from ‘[01m[Kdouble[m[K’ to ‘[01m[Kfloat[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnarrowing-Wnarrowing]8;;[m[K]
+[6.238s]   163 |         { w/2,  [01;35m[Kh/2[m[K, 0},
+[6.238s]       |                 [01;35m[K~^~[m[K
+[6.238s] [01m[K/home/leoxia/Code/XJTU-RMV-Task05/src/detect_and_solve/src/node.cpp:164:12:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[K((- w) / (double)2)[m[K’ from ‘[01m[Kdouble[m[K’ to ‘[01m[Kfloat[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnarrowing-Wnarrowing]8;;[m[K]
+[6.238s]   164 |         {[01;35m[K-w/2[m[K,  h/2, 0}
+[6.238s]       |          [01;35m[K~~^~[m[K
+[6.238s] [01m[K/home/leoxia/Code/XJTU-RMV-Task05/src/detect_and_solve/src/node.cpp:164:18:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[K(((double)h) / (double)2)[m[K’ from ‘[01m[Kdouble[m[K’ to ‘[01m[Kfloat[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnarrowing-Wnarrowing]8;;[m[K]
+[6.238s]   164 |         {-w/2,  [01;35m[Kh/2[m[K, 0}
+[6.239s]       |                 [01;35m[K~^~[m[K
+[10.179s] [01m[K/home/leoxia/Code/XJTU-RMV-Task05/src/detect_and_solve/src/node.cpp:262:3:[m[K [01;35m[Kwarning: [m[Kcontrol reaches end of non-void function [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreturn-type-Wreturn-type]8;;[m[K]
+[10.179s]   262 |   [01;35m[K}[m[K
+[10.179s]       |   [01;35m[K^[m[K
+[17.296s] [ 66%] [32m[1mLinking CXX executable detect_and_solve[0m
+[18.688s] [100%] Built target detect_and_solve
+[18.709s] Invoked command in '/home/leoxia/Code/XJTU-RMV-Task05/src/build/detect_and_solve' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/leoxia/Code/XJTU-RMV-Task05/src/build/detect_and_solve -- -j4 -l4
+[18.716s] Invoking command in '/home/leoxia/Code/XJTU-RMV-Task05/src/build/detect_and_solve': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/leoxia/Code/XJTU-RMV-Task05/src/build/detect_and_solve
+[18.729s] -- Install configuration: ""
+[18.731s] -- Execute custom install script
+[18.732s] -- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/lib/detect_and_solve/detect_and_solve
+[18.733s] -- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/include/detect_and_solve/recognition.hpp
+[18.734s] -- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/share/detect_and_solve/launch/launch.py
+[18.735s] -- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/share/detect_and_solve/config/camera.yaml
+[18.736s] -- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/share/ament_index/resource_index/package_run_dependencies/detect_and_solve
+[18.736s] -- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/share/ament_index/resource_index/parent_prefix_path/detect_and_solve
+[18.737s] -- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/share/detect_and_solve/environment/ament_prefix_path.sh
+[18.737s] -- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/share/detect_and_solve/environment/ament_prefix_path.dsv
+[18.737s] -- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/share/detect_and_solve/environment/path.sh
+[18.738s] -- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/share/detect_and_solve/environment/path.dsv
+[18.738s] -- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/share/detect_and_solve/local_setup.bash
+[18.739s] -- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/share/detect_and_solve/local_setup.sh
+[18.739s] -- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/share/detect_and_solve/local_setup.zsh
+[18.739s] -- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/share/detect_and_solve/local_setup.dsv
+[18.740s] -- Symlinking: /home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/share/detect_and_solve/package.dsv
+[18.757s] -- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/share/ament_index/resource_index/packages/detect_and_solve
+[18.757s] -- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/share/detect_and_solve/cmake/detect_and_solveConfig.cmake
+[18.758s] -- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/share/detect_and_solve/cmake/detect_and_solveConfig-version.cmake
+[18.758s] -- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/share/detect_and_solve/package.xml
+[18.762s] Invoked command in '/home/leoxia/Code/XJTU-RMV-Task05/src/build/detect_and_solve' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/leoxia/Code/XJTU-RMV-Task05/src/build/detect_and_solve

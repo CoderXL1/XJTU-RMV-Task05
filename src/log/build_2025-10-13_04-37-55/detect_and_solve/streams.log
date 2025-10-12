@@ -1,0 +1,29 @@
+[0.036s] Invoking command in '/home/leoxia/Code/XJTU-RMV-Task05/src/build/detect_and_solve': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/leoxia/Code/XJTU-RMV-Task05/src/build/detect_and_solve -- -j4 -l4
+[0.205s] [35m[1mConsolidate compiler generated dependencies of target detect_and_solve[0m
+[0.263s] [ 33%] [32mBuilding CXX object CMakeFiles/detect_and_solve.dir/src/recognition.cpp.o[0m
+[4.115s] [ 66%] [32m[1mLinking CXX executable detect_and_solve[0m
+[5.732s] [100%] Built target detect_and_solve
+[5.753s] Invoked command in '/home/leoxia/Code/XJTU-RMV-Task05/src/build/detect_and_solve' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/leoxia/Code/XJTU-RMV-Task05/src/build/detect_and_solve -- -j4 -l4
+[5.761s] Invoking command in '/home/leoxia/Code/XJTU-RMV-Task05/src/build/detect_and_solve': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/leoxia/Code/XJTU-RMV-Task05/src/build/detect_and_solve
+[5.773s] -- Install configuration: ""
+[5.775s] -- Execute custom install script
+[5.776s] -- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/lib/detect_and_solve/detect_and_solve
+[5.776s] -- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/include/detect_and_solve/recognition.hpp
+[5.778s] -- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/share/detect_and_solve/launch/launch.py
+[5.779s] -- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/share/detect_and_solve/config/camera.yaml
+[5.779s] -- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/share/ament_index/resource_index/package_run_dependencies/detect_and_solve
+[5.780s] -- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/share/ament_index/resource_index/parent_prefix_path/detect_and_solve
+[5.780s] -- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/share/detect_and_solve/environment/ament_prefix_path.sh
+[5.781s] -- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/share/detect_and_solve/environment/ament_prefix_path.dsv
+[5.781s] -- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/share/detect_and_solve/environment/path.sh
+[5.782s] -- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/share/detect_and_solve/environment/path.dsv
+[5.782s] -- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/share/detect_and_solve/local_setup.bash
+[5.783s] -- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/share/detect_and_solve/local_setup.sh
+[5.783s] -- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/share/detect_and_solve/local_setup.zsh
+[5.784s] -- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/share/detect_and_solve/local_setup.dsv
+[5.784s] -- Symlinking: /home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/share/detect_and_solve/package.dsv
+[5.801s] -- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/share/ament_index/resource_index/packages/detect_and_solve
+[5.801s] -- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/share/detect_and_solve/cmake/detect_and_solveConfig.cmake
+[5.801s] -- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/share/detect_and_solve/cmake/detect_and_solveConfig-version.cmake
+[5.802s] -- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/share/detect_and_solve/package.xml
+[5.809s] Invoked command in '/home/leoxia/Code/XJTU-RMV-Task05/src/build/detect_and_solve' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/leoxia/Code/XJTU-RMV-Task05/src/build/detect_and_solve

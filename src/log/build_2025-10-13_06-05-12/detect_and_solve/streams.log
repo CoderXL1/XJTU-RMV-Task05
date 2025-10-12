@@ -1,0 +1,120 @@
+[0.035s] Invoking command in '/home/leoxia/Code/XJTU-RMV-Task05/src/build/detect_and_solve': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/leoxia/Code/XJTU-RMV-Task05/src/build/detect_and_solve -- -j4 -l4
+[0.239s] [35m[1mConsolidate compiler generated dependencies of target detect_and_solve[0m
+[0.291s] [ 33%] [32mBuilding CXX object CMakeFiles/detect_and_solve.dir/src/node.cpp.o[0m
+[7.363s] [01m[K/home/leoxia/Code/XJTU-RMV-Task05/src/detect_and_solve/src/node.cpp:[m[K In constructor ‘[01m[KDetectorAndSolver::DetectorAndSolver()[m[K’:
+[7.364s] [01m[K/home/leoxia/Code/XJTU-RMV-Task05/src/detect_and_solve/src/node.cpp:33:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kcout[m[K’ was not declared in this scope; did you mean ‘[01m[Kstd::cout[m[K’?
+[7.364s]    33 |     [01;31m[Kcout[m[K<<camera_yaml<<endl;
+[7.364s]       |     [01;31m[K^~~~[m[K
+[7.364s]       |     [32m[Kstd::cout[m[K
+[7.364s] In file included from [01m[K/usr/include/opencv4/opencv2/flann/params.h:37[m[K,
+[7.364s]                  from [01m[K/usr/include/opencv4/opencv2/flann/flann_base.hpp:41[m[K,
+[7.364s]                  from [01m[K/usr/include/opencv4/opencv2/flann.hpp:48[m[K,
+[7.364s]                  from [01m[K/usr/include/opencv4/opencv2/opencv.hpp:65[m[K,
+[7.364s]                  from [01m[K/home/leoxia/Code/XJTU-RMV-Task05/src/detect_and_solve/src/node.cpp:2[m[K:
+[7.365s] [01m[K/usr/include/c++/11/iostream:61:18:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::cout[m[K’ declared here
+[7.365s]    61 |   extern ostream [01;36m[Kcout[m[K;          /// Linked to standard output
+[7.365s]       |                  [01;36m[K^~~~[m[K
+[7.380s] [01m[K/home/leoxia/Code/XJTU-RMV-Task05/src/detect_and_solve/src/node.cpp:33:11:[m[K [01;31m[Kerror: [m[K‘[01m[Kcamera_yaml[m[K’ was not declared in this scope; did you mean ‘[01m[Kcamera_yaml_[m[K’?
+[7.380s]    33 |     cout<<[01;31m[Kcamera_yaml[m[K<<endl;
+[7.380s]       |           [01;31m[K^~~~~~~~~~~[m[K
+[7.380s]       |           [32m[Kcamera_yaml_[m[K
+[7.380s] [01m[K/home/leoxia/Code/XJTU-RMV-Task05/src/detect_and_solve/src/node.cpp:33:24:[m[K [01;31m[Kerror: [m[K‘[01m[Kendl[m[K’ was not declared in this scope; did you mean ‘[01m[Kstd::endl[m[K’?
+[7.380s]    33 |     cout<<camera_yaml<<[01;31m[Kendl[m[K;
+[7.381s]       |                        [01;31m[K^~~~[m[K
+[7.381s]       |                        [32m[Kstd::endl[m[K
+[7.381s] In file included from [01m[K/usr/include/c++/11/istream:39[m[K,
+[7.381s]                  from [01m[K/usr/include/c++/11/sstream:38[m[K,
+[7.381s]                  from [01m[K/usr/include/c++/11/complex:45[m[K,
+[7.381s]                  from [01m[K/usr/include/opencv4/opencv2/core/cvstd.inl.hpp:47[m[K,
+[7.381s]                  from [01m[K/usr/include/opencv4/opencv2/core.hpp:3306[m[K,
+[7.381s]                  from [01m[K/usr/include/opencv4/opencv2/opencv.hpp:52[m[K,
+[7.381s]                  from [01m[K/home/leoxia/Code/XJTU-RMV-Task05/src/detect_and_solve/src/node.cpp:2[m[K:
+[7.381s] [01m[K/usr/include/c++/11/ostream:684:5:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::endl[m[K’ declared here
+[7.382s]   684 |     [01;36m[Kendl[m[K(basic_ostream<_CharT, _Traits>& __os)
+[7.382s]       |     [01;36m[K^~~~[m[K
+[7.384s] [01m[K/home/leoxia/Code/XJTU-RMV-Task05/src/detect_and_solve/src/node.cpp:54:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kpath[m[K’ was not declared in this scope
+[7.384s]    54 |       capture_.open([01;31m[Kpath[m[K);  // 从文件取流
+[7.385s]       |                     [01;31m[K^~~~[m[K
+[7.385s] [01m[K/home/leoxia/Code/XJTU-RMV-Task05/src/detect_and_solve/src/node.cpp:54:21:[m[K [01;36m[Knote: [m[Ksuggested alternatives:
+[7.385s] In file included from [01m[K/usr/include/c++/11/filesystem:45[m[K,
+[7.385s]                  from [01m[K/home/leoxia/Code/XJTU-RMV-Task05/src/detect_and_solve/src/node.cpp:6[m[K:
+[7.386s] [01m[K/usr/include/c++/11/bits/fs_path.h:248:9:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::filesystem::__cxx11::path[m[K’
+[7.386s]   248 |   class [01;36m[Kpath[m[K
+[7.386s]       |         [01;36m[K^~~~[m[K
+[7.387s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logger.hpp:25[m[K,
+[7.387s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:23[m[K,
+[7.387s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+[7.387s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[7.388s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[7.388s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[7.388s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[7.388s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[7.388s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[7.388s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[7.388s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[7.388s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[7.389s]                  from [01m[K/home/leoxia/Code/XJTU-RMV-Task05/src/detect_and_solve/src/node.cpp:8[m[K:
+[7.389s] [01m[K/opt/ros/humble/include/rcpputils/rcpputils/filesystem_helper.hpp:76:7:[m[K [01;36m[Knote: [m[K  ‘[01m[Krcpputils::fs::path[m[K’
+[7.390s]    76 | class [01;36m[Kpath[m[K
+[7.390s]       |       [01;36m[K^~~~[m[K
+[7.397s] [01m[K/home/leoxia/Code/XJTU-RMV-Task05/src/detect_and_solve/src/node.cpp:60:7:[m[K [01;31m[Kerror: [m[K‘[01m[Ktimer_[m[K’ was not declared in this scope; did you mean ‘[01m[Ktimer_t[m[K’?
+[7.398s]    60 |       [01;31m[Ktimer_[m[K = create_wall_timer(std::chrono::milliseconds(30),
+[7.398s]       |       [01;31m[K^~~~~~[m[K
+[7.398s]       |       [32m[Ktimer_t[m[K
+[7.399s] [01m[K/home/leoxia/Code/XJTU-RMV-Task05/src/detect_and_solve/src/node.cpp:61:22:[m[K [01;31m[Kerror: [m[K‘[01m[KDetectAndSolve[m[K’ has not been declared
+[7.399s]    61 |           std::bind(&[01;31m[KDetectAndSolve[m[K::videoLoop, this));
+[7.399s]       |                      [01;31m[K^~~~~~~~~~~~~~[m[K
+[7.400s] [01m[K/home/leoxia/Code/XJTU-RMV-Task05/src/detect_and_solve/src/node.cpp:64:11:[m[K [01;31m[Kerror: [m[K‘[01m[Kpath[m[K’ was not declared in this scope
+[7.400s]    64 |           [01;31m[Kpath[m[K, 10, std::bind(&DetectorAndSolver::imageCallback, this, std::placeholders::_1));
+[7.400s]       |           [01;31m[K^~~~[m[K
+[7.403s] [01m[K/home/leoxia/Code/XJTU-RMV-Task05/src/detect_and_solve/src/node.cpp:64:11:[m[K [01;36m[Knote: [m[Ksuggested alternatives:
+[7.403s] In file included from [01m[K/usr/include/c++/11/filesystem:45[m[K,
+[7.403s]                  from [01m[K/home/leoxia/Code/XJTU-RMV-Task05/src/detect_and_solve/src/node.cpp:6[m[K:
+[7.403s] [01m[K/usr/include/c++/11/bits/fs_path.h:248:9:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::filesystem::__cxx11::path[m[K’
+[7.403s]   248 |   class [01;36m[Kpath[m[K
+[7.403s]       |         [01;36m[K^~~~[m[K
+[7.403s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logger.hpp:25[m[K,
+[7.403s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:23[m[K,
+[7.404s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+[7.404s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[7.404s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[7.405s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[7.405s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[7.405s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[7.405s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[7.405s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[7.405s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[7.407s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[7.407s]                  from [01m[K/home/leoxia/Code/XJTU-RMV-Task05/src/detect_and_solve/src/node.cpp:8[m[K:
+[7.407s] [01m[K/opt/ros/humble/include/rcpputils/rcpputils/filesystem_helper.hpp:76:7:[m[K [01;36m[Knote: [m[K  ‘[01m[Krcpputils::fs::path[m[K’
+[7.407s]    76 | class [01;36m[Kpath[m[K
+[7.407s]       |       [01;36m[K^~~~[m[K
+[7.453s] [01m[K/home/leoxia/Code/XJTU-RMV-Task05/src/detect_and_solve/src/node.cpp:[m[K In member function ‘[01m[Kbool DetectorAndSolver::solve_pnp(cv::RotatedRect&, cv::Mat)[m[K’:
+[7.454s] [01m[K/home/leoxia/Code/XJTU-RMV-Task05/src/detect_and_solve/src/node.cpp:183:12:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[K((- w) / (double)2)[m[K’ from ‘[01m[Kdouble[m[K’ to ‘[01m[Kfloat[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnarrowing-Wnarrowing]8;;[m[K]
+[7.454s]   183 |         {[01;35m[K-w/2[m[K, -h/2, 0},
+[7.454s]       |          [01;35m[K~~^~[m[K
+[7.454s] [01m[K/home/leoxia/Code/XJTU-RMV-Task05/src/detect_and_solve/src/node.cpp:183:18:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[K((- h) / (double)2)[m[K’ from ‘[01m[Kdouble[m[K’ to ‘[01m[Kfloat[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnarrowing-Wnarrowing]8;;[m[K]
+[7.454s]   183 |         {-w/2, [01;35m[K-h/2[m[K, 0},
+[7.454s]       |                [01;35m[K~~^~[m[K
+[7.455s] [01m[K/home/leoxia/Code/XJTU-RMV-Task05/src/detect_and_solve/src/node.cpp:184:12:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[K(((double)w) / (double)2)[m[K’ from ‘[01m[Kdouble[m[K’ to ‘[01m[Kfloat[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnarrowing-Wnarrowing]8;;[m[K]
+[7.455s]   184 |         { [01;35m[Kw/2[m[K, -h/2, 0},
+[7.455s]       |           [01;35m[K~^~[m[K
+[7.455s] [01m[K/home/leoxia/Code/XJTU-RMV-Task05/src/detect_and_solve/src/node.cpp:184:18:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[K((- h) / (double)2)[m[K’ from ‘[01m[Kdouble[m[K’ to ‘[01m[Kfloat[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnarrowing-Wnarrowing]8;;[m[K]
+[7.455s]   184 |         { w/2, [01;35m[K-h/2[m[K, 0},
+[7.455s]       |                [01;35m[K~~^~[m[K
+[7.455s] [01m[K/home/leoxia/Code/XJTU-RMV-Task05/src/detect_and_solve/src/node.cpp:185:12:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[K(((double)w) / (double)2)[m[K’ from ‘[01m[Kdouble[m[K’ to ‘[01m[Kfloat[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnarrowing-Wnarrowing]8;;[m[K]
+[7.455s]   185 |         { [01;35m[Kw/2[m[K,  h/2, 0},
+[7.455s]       |           [01;35m[K~^~[m[K
+[7.455s] [01m[K/home/leoxia/Code/XJTU-RMV-Task05/src/detect_and_solve/src/node.cpp:185:18:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[K(((double)h) / (double)2)[m[K’ from ‘[01m[Kdouble[m[K’ to ‘[01m[Kfloat[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnarrowing-Wnarrowing]8;;[m[K]
+[7.455s]   185 |         { w/2,  [01;35m[Kh/2[m[K, 0},
+[7.456s]       |                 [01;35m[K~^~[m[K
+[7.456s] [01m[K/home/leoxia/Code/XJTU-RMV-Task05/src/detect_and_solve/src/node.cpp:186:12:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[K((- w) / (double)2)[m[K’ from ‘[01m[Kdouble[m[K’ to ‘[01m[Kfloat[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnarrowing-Wnarrowing]8;;[m[K]
+[7.456s]   186 |         {[01;35m[K-w/2[m[K,  h/2, 0}
+[7.456s]       |          [01;35m[K~~^~[m[K
+[7.457s] [01m[K/home/leoxia/Code/XJTU-RMV-Task05/src/detect_and_solve/src/node.cpp:186:18:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[K(((double)h) / (double)2)[m[K’ from ‘[01m[Kdouble[m[K’ to ‘[01m[Kfloat[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnarrowing-Wnarrowing]8;;[m[K]
+[7.457s]   186 |         {-w/2,  [01;35m[Kh/2[m[K, 0}
+[7.457s]       |                 [01;35m[K~^~[m[K
+[9.115s] gmake[2]: *** [CMakeFiles/detect_and_solve.dir/build.make:76: CMakeFiles/detect_and_solve.dir/src/node.cpp.o] Error 1
+[9.116s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/detect_and_solve.dir/all] Error 2
+[9.116s] gmake: *** [Makefile:146: all] Error 2
+[9.121s] Invoked command in '/home/leoxia/Code/XJTU-RMV-Task05/src/build/detect_and_solve' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/leoxia/Code/XJTU-RMV-Task05/src/build/detect_and_solve -- -j4 -l4

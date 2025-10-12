@@ -1,0 +1,228 @@
+[0.419s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--symlink-install']
+[0.419s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=True, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=4, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x72154239b220>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x72154239ad40>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x72154239ad40>>)
+[0.990s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.992s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.992s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.992s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.992s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.992s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.992s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/leoxia/Code/XJTU-RMV-Task05/src'
+[0.992s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.993s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.993s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.993s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.993s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.993s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.993s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.993s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.993s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[1.026s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[1.026s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[1.026s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[1.026s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[1.026s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[1.027s] Level 1:colcon.colcon_core.package_identification:_identify($(ALLUSERSPROFILE)) by extensions ['ignore', 'ignore_ament_install']
+[1.027s] Level 1:colcon.colcon_core.package_identification:_identify($(ALLUSERSPROFILE)) by extension 'ignore'
+[1.027s] Level 1:colcon.colcon_core.package_identification:_identify($(ALLUSERSPROFILE)) by extension 'ignore_ament_install'
+[1.027s] Level 1:colcon.colcon_core.package_identification:_identify($(ALLUSERSPROFILE)) by extensions ['colcon_pkg']
+[1.027s] Level 1:colcon.colcon_core.package_identification:_identify($(ALLUSERSPROFILE)) by extension 'colcon_pkg'
+[1.027s] Level 1:colcon.colcon_core.package_identification:_identify($(ALLUSERSPROFILE)) by extensions ['colcon_meta']
+[1.028s] Level 1:colcon.colcon_core.package_identification:_identify($(ALLUSERSPROFILE)) by extension 'colcon_meta'
+[1.028s] Level 1:colcon.colcon_core.package_identification:_identify($(ALLUSERSPROFILE)) by extensions ['ros']
+[1.028s] Level 1:colcon.colcon_core.package_identification:_identify($(ALLUSERSPROFILE)) by extension 'ros'
+[1.028s] Level 1:colcon.colcon_core.package_identification:_identify($(ALLUSERSPROFILE)) by extensions ['cmake', 'python']
+[1.029s] Level 1:colcon.colcon_core.package_identification:_identify($(ALLUSERSPROFILE)) by extension 'cmake'
+[1.029s] Level 1:colcon.colcon_core.package_identification:_identify($(ALLUSERSPROFILE)) by extension 'python'
+[1.029s] Level 1:colcon.colcon_core.package_identification:_identify($(ALLUSERSPROFILE)) by extensions ['python_setup_py']
+[1.029s] Level 1:colcon.colcon_core.package_identification:_identify($(ALLUSERSPROFILE)) by extension 'python_setup_py'
+[1.030s] Level 1:colcon.colcon_core.package_identification:_identify($(ALLUSERSPROFILE)/GenICam) by extensions ['ignore', 'ignore_ament_install']
+[1.031s] Level 1:colcon.colcon_core.package_identification:_identify($(ALLUSERSPROFILE)/GenICam) by extension 'ignore'
+[1.031s] Level 1:colcon.colcon_core.package_identification:_identify($(ALLUSERSPROFILE)/GenICam) by extension 'ignore_ament_install'
+[1.031s] Level 1:colcon.colcon_core.package_identification:_identify($(ALLUSERSPROFILE)/GenICam) by extensions ['colcon_pkg']
+[1.031s] Level 1:colcon.colcon_core.package_identification:_identify($(ALLUSERSPROFILE)/GenICam) by extension 'colcon_pkg'
+[1.031s] Level 1:colcon.colcon_core.package_identification:_identify($(ALLUSERSPROFILE)/GenICam) by extensions ['colcon_meta']
+[1.031s] Level 1:colcon.colcon_core.package_identification:_identify($(ALLUSERSPROFILE)/GenICam) by extension 'colcon_meta'
+[1.031s] Level 1:colcon.colcon_core.package_identification:_identify($(ALLUSERSPROFILE)/GenICam) by extensions ['ros']
+[1.031s] Level 1:colcon.colcon_core.package_identification:_identify($(ALLUSERSPROFILE)/GenICam) by extension 'ros'
+[1.032s] Level 1:colcon.colcon_core.package_identification:_identify($(ALLUSERSPROFILE)/GenICam) by extensions ['cmake', 'python']
+[1.032s] Level 1:colcon.colcon_core.package_identification:_identify($(ALLUSERSPROFILE)/GenICam) by extension 'cmake'
+[1.032s] Level 1:colcon.colcon_core.package_identification:_identify($(ALLUSERSPROFILE)/GenICam) by extension 'python'
+[1.032s] Level 1:colcon.colcon_core.package_identification:_identify($(ALLUSERSPROFILE)/GenICam) by extensions ['python_setup_py']
+[1.032s] Level 1:colcon.colcon_core.package_identification:_identify($(ALLUSERSPROFILE)/GenICam) by extension 'python_setup_py'
+[1.033s] Level 1:colcon.colcon_core.package_identification:_identify($(ALLUSERSPROFILE)/GenICam/xml) by extensions ['ignore', 'ignore_ament_install']
+[1.033s] Level 1:colcon.colcon_core.package_identification:_identify($(ALLUSERSPROFILE)/GenICam/xml) by extension 'ignore'
+[1.033s] Level 1:colcon.colcon_core.package_identification:_identify($(ALLUSERSPROFILE)/GenICam/xml) by extension 'ignore_ament_install'
+[1.033s] Level 1:colcon.colcon_core.package_identification:_identify($(ALLUSERSPROFILE)/GenICam/xml) by extensions ['colcon_pkg']
+[1.033s] Level 1:colcon.colcon_core.package_identification:_identify($(ALLUSERSPROFILE)/GenICam/xml) by extension 'colcon_pkg'
+[1.033s] Level 1:colcon.colcon_core.package_identification:_identify($(ALLUSERSPROFILE)/GenICam/xml) by extensions ['colcon_meta']
+[1.033s] Level 1:colcon.colcon_core.package_identification:_identify($(ALLUSERSPROFILE)/GenICam/xml) by extension 'colcon_meta'
+[1.034s] Level 1:colcon.colcon_core.package_identification:_identify($(ALLUSERSPROFILE)/GenICam/xml) by extensions ['ros']
+[1.034s] Level 1:colcon.colcon_core.package_identification:_identify($(ALLUSERSPROFILE)/GenICam/xml) by extension 'ros'
+[1.034s] Level 1:colcon.colcon_core.package_identification:_identify($(ALLUSERSPROFILE)/GenICam/xml) by extensions ['cmake', 'python']
+[1.034s] Level 1:colcon.colcon_core.package_identification:_identify($(ALLUSERSPROFILE)/GenICam/xml) by extension 'cmake'
+[1.034s] Level 1:colcon.colcon_core.package_identification:_identify($(ALLUSERSPROFILE)/GenICam/xml) by extension 'python'
+[1.034s] Level 1:colcon.colcon_core.package_identification:_identify($(ALLUSERSPROFILE)/GenICam/xml) by extensions ['python_setup_py']
+[1.034s] Level 1:colcon.colcon_core.package_identification:_identify($(ALLUSERSPROFILE)/GenICam/xml) by extension 'python_setup_py'
+[1.035s] Level 1:colcon.colcon_core.package_identification:_identify($(ALLUSERSPROFILE)/GenICam/xml/cache) by extensions ['ignore', 'ignore_ament_install']
+[1.035s] Level 1:colcon.colcon_core.package_identification:_identify($(ALLUSERSPROFILE)/GenICam/xml/cache) by extension 'ignore'
+[1.035s] Level 1:colcon.colcon_core.package_identification:_identify($(ALLUSERSPROFILE)/GenICam/xml/cache) by extension 'ignore_ament_install'
+[1.035s] Level 1:colcon.colcon_core.package_identification:_identify($(ALLUSERSPROFILE)/GenICam/xml/cache) by extensions ['colcon_pkg']
+[1.035s] Level 1:colcon.colcon_core.package_identification:_identify($(ALLUSERSPROFILE)/GenICam/xml/cache) by extension 'colcon_pkg'
+[1.036s] Level 1:colcon.colcon_core.package_identification:_identify($(ALLUSERSPROFILE)/GenICam/xml/cache) by extensions ['colcon_meta']
+[1.036s] Level 1:colcon.colcon_core.package_identification:_identify($(ALLUSERSPROFILE)/GenICam/xml/cache) by extension 'colcon_meta'
+[1.036s] Level 1:colcon.colcon_core.package_identification:_identify($(ALLUSERSPROFILE)/GenICam/xml/cache) by extensions ['ros']
+[1.036s] Level 1:colcon.colcon_core.package_identification:_identify($(ALLUSERSPROFILE)/GenICam/xml/cache) by extension 'ros'
+[1.036s] Level 1:colcon.colcon_core.package_identification:_identify($(ALLUSERSPROFILE)/GenICam/xml/cache) by extensions ['cmake', 'python']
+[1.036s] Level 1:colcon.colcon_core.package_identification:_identify($(ALLUSERSPROFILE)/GenICam/xml/cache) by extension 'cmake'
+[1.036s] Level 1:colcon.colcon_core.package_identification:_identify($(ALLUSERSPROFILE)/GenICam/xml/cache) by extension 'python'
+[1.036s] Level 1:colcon.colcon_core.package_identification:_identify($(ALLUSERSPROFILE)/GenICam/xml/cache) by extensions ['python_setup_py']
+[1.036s] Level 1:colcon.colcon_core.package_identification:_identify($(ALLUSERSPROFILE)/GenICam/xml/cache) by extension 'python_setup_py'
+[1.037s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[1.037s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[1.037s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[1.037s] Level 1:colcon.colcon_core.package_identification:_identify(detect_and_solve) by extensions ['ignore', 'ignore_ament_install']
+[1.037s] Level 1:colcon.colcon_core.package_identification:_identify(detect_and_solve) by extension 'ignore'
+[1.037s] Level 1:colcon.colcon_core.package_identification:_identify(detect_and_solve) by extension 'ignore_ament_install'
+[1.037s] Level 1:colcon.colcon_core.package_identification:_identify(detect_and_solve) by extensions ['colcon_pkg']
+[1.038s] Level 1:colcon.colcon_core.package_identification:_identify(detect_and_solve) by extension 'colcon_pkg'
+[1.038s] Level 1:colcon.colcon_core.package_identification:_identify(detect_and_solve) by extensions ['colcon_meta']
+[1.038s] Level 1:colcon.colcon_core.package_identification:_identify(detect_and_solve) by extension 'colcon_meta'
+[1.038s] Level 1:colcon.colcon_core.package_identification:_identify(detect_and_solve) by extensions ['ros']
+[1.038s] Level 1:colcon.colcon_core.package_identification:_identify(detect_and_solve) by extension 'ros'
+[1.047s] DEBUG:colcon.colcon_core.package_identification:Package 'detect_and_solve' with type 'ros.ament_cmake' and name 'detect_and_solve'
+[1.048s] Level 1:colcon.colcon_core.package_identification:_identify(hik_camera) by extensions ['ignore', 'ignore_ament_install']
+[1.048s] Level 1:colcon.colcon_core.package_identification:_identify(hik_camera) by extension 'ignore'
+[1.048s] Level 1:colcon.colcon_core.package_identification:_identify(hik_camera) by extension 'ignore_ament_install'
+[1.048s] Level 1:colcon.colcon_core.package_identification:_identify(hik_camera) by extensions ['colcon_pkg']
+[1.048s] Level 1:colcon.colcon_core.package_identification:_identify(hik_camera) by extension 'colcon_pkg'
+[1.048s] Level 1:colcon.colcon_core.package_identification:_identify(hik_camera) by extensions ['colcon_meta']
+[1.048s] Level 1:colcon.colcon_core.package_identification:_identify(hik_camera) by extension 'colcon_meta'
+[1.048s] Level 1:colcon.colcon_core.package_identification:_identify(hik_camera) by extensions ['ros']
+[1.049s] Level 1:colcon.colcon_core.package_identification:_identify(hik_camera) by extension 'ros'
+[1.050s] DEBUG:colcon.colcon_core.package_identification:Package 'hik_camera' with type 'ros.ament_cmake' and name 'hik_camera'
+[1.051s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[1.051s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[1.051s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[1.051s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[1.051s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[1.051s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[1.051s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[1.052s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[1.053s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[1.053s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[1.053s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[1.127s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[1.127s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[1.132s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/home/leoxia/Code/XJTU-RMV-Task05/src/install/detect' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[1.134s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 2 installed packages in /home/leoxia/Code/XJTU-RMV-Task05/src/install
+[1.137s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 271 installed packages in /opt/ros/humble
+[1.141s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[1.356s] Level 5:colcon.colcon_core.verb:set package 'detect_and_solve' build argument 'cmake_args' from command line to 'None'
+[1.356s] Level 5:colcon.colcon_core.verb:set package 'detect_and_solve' build argument 'cmake_target' from command line to 'None'
+[1.356s] Level 5:colcon.colcon_core.verb:set package 'detect_and_solve' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.356s] Level 5:colcon.colcon_core.verb:set package 'detect_and_solve' build argument 'cmake_clean_cache' from command line to 'False'
+[1.356s] Level 5:colcon.colcon_core.verb:set package 'detect_and_solve' build argument 'cmake_clean_first' from command line to 'False'
+[1.357s] Level 5:colcon.colcon_core.verb:set package 'detect_and_solve' build argument 'cmake_force_configure' from command line to 'False'
+[1.357s] Level 5:colcon.colcon_core.verb:set package 'detect_and_solve' build argument 'ament_cmake_args' from command line to 'None'
+[1.357s] Level 5:colcon.colcon_core.verb:set package 'detect_and_solve' build argument 'catkin_cmake_args' from command line to 'None'
+[1.357s] Level 5:colcon.colcon_core.verb:set package 'detect_and_solve' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.357s] DEBUG:colcon.colcon_core.verb:Building package 'detect_and_solve' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/leoxia/Code/XJTU-RMV-Task05/src/build/detect_and_solve', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve', 'merge_install': False, 'path': '/home/leoxia/Code/XJTU-RMV-Task05/src/detect_and_solve', 'symlink_install': True, 'test_result_base': None}
+[1.357s] Level 5:colcon.colcon_core.verb:set package 'hik_camera' build argument 'cmake_args' from command line to 'None'
+[1.357s] Level 5:colcon.colcon_core.verb:set package 'hik_camera' build argument 'cmake_target' from command line to 'None'
+[1.358s] Level 5:colcon.colcon_core.verb:set package 'hik_camera' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.358s] Level 5:colcon.colcon_core.verb:set package 'hik_camera' build argument 'cmake_clean_cache' from command line to 'False'
+[1.358s] Level 5:colcon.colcon_core.verb:set package 'hik_camera' build argument 'cmake_clean_first' from command line to 'False'
+[1.358s] Level 5:colcon.colcon_core.verb:set package 'hik_camera' build argument 'cmake_force_configure' from command line to 'False'
+[1.358s] Level 5:colcon.colcon_core.verb:set package 'hik_camera' build argument 'ament_cmake_args' from command line to 'None'
+[1.358s] Level 5:colcon.colcon_core.verb:set package 'hik_camera' build argument 'catkin_cmake_args' from command line to 'None'
+[1.358s] Level 5:colcon.colcon_core.verb:set package 'hik_camera' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.358s] DEBUG:colcon.colcon_core.verb:Building package 'hik_camera' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/leoxia/Code/XJTU-RMV-Task05/src/build/hik_camera', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/leoxia/Code/XJTU-RMV-Task05/src/install/hik_camera', 'merge_install': False, 'path': '/home/leoxia/Code/XJTU-RMV-Task05/src/hik_camera', 'symlink_install': True, 'test_result_base': None}
+[1.358s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[1.361s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[1.361s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/leoxia/Code/XJTU-RMV-Task05/src/detect_and_solve' with build type 'ament_cmake'
+[1.362s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/leoxia/Code/XJTU-RMV-Task05/src/detect_and_solve'
+[1.371s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[1.372s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.372s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.379s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/leoxia/Code/XJTU-RMV-Task05/src/hik_camera' with build type 'ament_cmake'
+[1.379s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/leoxia/Code/XJTU-RMV-Task05/src/hik_camera'
+[1.380s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.380s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.407s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/leoxia/Code/XJTU-RMV-Task05/src/build/detect_and_solve': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/leoxia/Code/XJTU-RMV-Task05/src/build/detect_and_solve -- -j4 -l4
+[1.419s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/leoxia/Code/XJTU-RMV-Task05/src/build/hik_camera': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/leoxia/Code/XJTU-RMV-Task05/src/build/hik_camera -- -j4 -l4
+[1.742s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/leoxia/Code/XJTU-RMV-Task05/src/build/hik_camera' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/leoxia/Code/XJTU-RMV-Task05/src/build/hik_camera -- -j4 -l4
+[1.766s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/leoxia/Code/XJTU-RMV-Task05/src/build/hik_camera': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/leoxia/Code/XJTU-RMV-Task05/src/build/hik_camera
+[1.817s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(hik_camera)
+[1.818s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/leoxia/Code/XJTU-RMV-Task05/src/build/hik_camera' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/leoxia/Code/XJTU-RMV-Task05/src/build/hik_camera
+[1.834s] Level 1:colcon.colcon_core.environment:checking '/home/leoxia/Code/XJTU-RMV-Task05/src/install/hik_camera' for CMake module files
+[1.836s] Level 1:colcon.colcon_core.environment:checking '/home/leoxia/Code/XJTU-RMV-Task05/src/install/hik_camera' for CMake config files
+[1.837s] Level 1:colcon.colcon_core.shell:create_environment_hook('hik_camera', 'cmake_prefix_path')
+[1.838s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/leoxia/Code/XJTU-RMV-Task05/src/install/hik_camera/share/hik_camera/hook/cmake_prefix_path.ps1'
+[1.842s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/leoxia/Code/XJTU-RMV-Task05/src/install/hik_camera/share/hik_camera/hook/cmake_prefix_path.dsv'
+[1.844s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/leoxia/Code/XJTU-RMV-Task05/src/install/hik_camera/share/hik_camera/hook/cmake_prefix_path.sh'
+[1.847s] Level 1:colcon.colcon_core.environment:checking '/home/leoxia/Code/XJTU-RMV-Task05/src/install/hik_camera/lib'
+[1.847s] Level 1:colcon.colcon_core.environment:checking '/home/leoxia/Code/XJTU-RMV-Task05/src/install/hik_camera/bin'
+[1.847s] Level 1:colcon.colcon_core.environment:checking '/home/leoxia/Code/XJTU-RMV-Task05/src/install/hik_camera/lib/pkgconfig/hik_camera.pc'
+[1.848s] Level 1:colcon.colcon_core.environment:checking '/home/leoxia/Code/XJTU-RMV-Task05/src/install/hik_camera/lib/python3.10/site-packages'
+[1.848s] Level 1:colcon.colcon_core.environment:checking '/home/leoxia/Code/XJTU-RMV-Task05/src/install/hik_camera/bin'
+[1.849s] INFO:colcon.colcon_core.shell:Creating package script '/home/leoxia/Code/XJTU-RMV-Task05/src/install/hik_camera/share/hik_camera/package.ps1'
+[1.851s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/leoxia/Code/XJTU-RMV-Task05/src/install/hik_camera/share/hik_camera/package.dsv'
+[1.852s] INFO:colcon.colcon_core.shell:Creating package script '/home/leoxia/Code/XJTU-RMV-Task05/src/install/hik_camera/share/hik_camera/package.sh'
+[1.853s] INFO:colcon.colcon_core.shell:Creating package script '/home/leoxia/Code/XJTU-RMV-Task05/src/install/hik_camera/share/hik_camera/package.bash'
+[1.855s] INFO:colcon.colcon_core.shell:Creating package script '/home/leoxia/Code/XJTU-RMV-Task05/src/install/hik_camera/share/hik_camera/package.zsh'
+[1.856s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/leoxia/Code/XJTU-RMV-Task05/src/install/hik_camera/share/colcon-core/packages/hik_camera)
+[1.857s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(hik_camera)
+[1.858s] Level 1:colcon.colcon_core.environment:checking '/home/leoxia/Code/XJTU-RMV-Task05/src/install/hik_camera' for CMake module files
+[1.859s] Level 1:colcon.colcon_core.environment:checking '/home/leoxia/Code/XJTU-RMV-Task05/src/install/hik_camera' for CMake config files
+[1.860s] Level 1:colcon.colcon_core.shell:create_environment_hook('hik_camera', 'cmake_prefix_path')
+[1.861s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/leoxia/Code/XJTU-RMV-Task05/src/install/hik_camera/share/hik_camera/hook/cmake_prefix_path.ps1'
+[1.861s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/leoxia/Code/XJTU-RMV-Task05/src/install/hik_camera/share/hik_camera/hook/cmake_prefix_path.dsv'
+[1.862s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/leoxia/Code/XJTU-RMV-Task05/src/install/hik_camera/share/hik_camera/hook/cmake_prefix_path.sh'
+[1.863s] Level 1:colcon.colcon_core.environment:checking '/home/leoxia/Code/XJTU-RMV-Task05/src/install/hik_camera/lib'
+[1.863s] Level 1:colcon.colcon_core.environment:checking '/home/leoxia/Code/XJTU-RMV-Task05/src/install/hik_camera/bin'
+[1.864s] Level 1:colcon.colcon_core.environment:checking '/home/leoxia/Code/XJTU-RMV-Task05/src/install/hik_camera/lib/pkgconfig/hik_camera.pc'
+[1.864s] Level 1:colcon.colcon_core.environment:checking '/home/leoxia/Code/XJTU-RMV-Task05/src/install/hik_camera/lib/python3.10/site-packages'
+[1.864s] Level 1:colcon.colcon_core.environment:checking '/home/leoxia/Code/XJTU-RMV-Task05/src/install/hik_camera/bin'
+[1.865s] INFO:colcon.colcon_core.shell:Creating package script '/home/leoxia/Code/XJTU-RMV-Task05/src/install/hik_camera/share/hik_camera/package.ps1'
+[1.867s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/leoxia/Code/XJTU-RMV-Task05/src/install/hik_camera/share/hik_camera/package.dsv'
+[1.868s] INFO:colcon.colcon_core.shell:Creating package script '/home/leoxia/Code/XJTU-RMV-Task05/src/install/hik_camera/share/hik_camera/package.sh'
+[1.869s] INFO:colcon.colcon_core.shell:Creating package script '/home/leoxia/Code/XJTU-RMV-Task05/src/install/hik_camera/share/hik_camera/package.bash'
+[1.872s] INFO:colcon.colcon_core.shell:Creating package script '/home/leoxia/Code/XJTU-RMV-Task05/src/install/hik_camera/share/hik_camera/package.zsh'
+[1.873s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/leoxia/Code/XJTU-RMV-Task05/src/install/hik_camera/share/colcon-core/packages/hik_camera)
+[15.310s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/leoxia/Code/XJTU-RMV-Task05/src/build/detect_and_solve' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/leoxia/Code/XJTU-RMV-Task05/src/build/detect_and_solve -- -j4 -l4
+[15.313s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(detect_and_solve)
+[15.313s] Level 1:colcon.colcon_core.environment:checking '/home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve' for CMake module files
+[15.318s] Level 1:colcon.colcon_core.environment:checking '/home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve' for CMake config files
+[15.324s] Level 1:colcon.colcon_core.shell:create_environment_hook('detect_and_solve', 'cmake_prefix_path')
+[15.325s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/share/detect_and_solve/hook/cmake_prefix_path.ps1'
+[15.327s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/share/detect_and_solve/hook/cmake_prefix_path.dsv'
+[15.328s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/share/detect_and_solve/hook/cmake_prefix_path.sh'
+[15.330s] Level 1:colcon.colcon_core.environment:checking '/home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/lib'
+[15.331s] Level 1:colcon.colcon_core.environment:checking '/home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/bin'
+[15.331s] Level 1:colcon.colcon_core.environment:checking '/home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/lib/pkgconfig/detect_and_solve.pc'
+[15.331s] Level 1:colcon.colcon_core.environment:checking '/home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/lib/python3.10/site-packages'
+[15.332s] Level 1:colcon.colcon_core.environment:checking '/home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/bin'
+[15.333s] INFO:colcon.colcon_core.shell:Creating package script '/home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/share/detect_and_solve/package.ps1'
+[15.335s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/share/detect_and_solve/package.dsv'
+[15.337s] INFO:colcon.colcon_core.shell:Creating package script '/home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/share/detect_and_solve/package.sh'
+[15.338s] INFO:colcon.colcon_core.shell:Creating package script '/home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/share/detect_and_solve/package.bash'
+[15.340s] INFO:colcon.colcon_core.shell:Creating package script '/home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/share/detect_and_solve/package.zsh'
+[15.341s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/share/colcon-core/packages/detect_and_solve)
+[15.353s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[15.353s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[15.353s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '2'
+[15.354s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[15.384s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[15.384s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[15.384s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[15.495s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[15.496s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/leoxia/Code/XJTU-RMV-Task05/src/install/local_setup.ps1'
+[15.499s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/leoxia/Code/XJTU-RMV-Task05/src/install/_local_setup_util_ps1.py'
+[15.504s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/leoxia/Code/XJTU-RMV-Task05/src/install/setup.ps1'
+[15.508s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/leoxia/Code/XJTU-RMV-Task05/src/install/local_setup.sh'
+[15.511s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/leoxia/Code/XJTU-RMV-Task05/src/install/_local_setup_util_sh.py'
+[15.512s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/leoxia/Code/XJTU-RMV-Task05/src/install/setup.sh'
+[15.515s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/leoxia/Code/XJTU-RMV-Task05/src/install/local_setup.bash'
+[15.517s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/leoxia/Code/XJTU-RMV-Task05/src/install/setup.bash'
+[15.535s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/leoxia/Code/XJTU-RMV-Task05/src/install/local_setup.zsh'
+[15.539s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/leoxia/Code/XJTU-RMV-Task05/src/install/setup.zsh'

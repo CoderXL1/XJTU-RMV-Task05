@@ -1,0 +1,20 @@
+[35m[1mConsolidate compiler generated dependencies of target detect_and_solve[0m
+[ 33%] [32mBuilding CXX object CMakeFiles/detect_and_solve.dir/src/recognition.cpp.o[0m
+[01m[K/home/leoxia/Code/XJTU-RMV-Task05/src/detect_and_solve/src/recognition.cpp:[m[K In function ‘[01m[Kbool recognition_main(const cv::Mat&, cv::RotatedRect&, cv::RotatedRect&)[m[K’:
+[01m[K/home/leoxia/Code/XJTU-RMV-Task05/src/detect_and_solve/src/recognition.cpp:62:11:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kimshow(cv::Mat&)[m[K’
+   62 |     [01;31m[Kimshow(edgeImg)[m[K;
+      |     [01;31m[K~~~~~~^~~~~~~~~[m[K
+In file included from [01m[K/usr/include/opencv4/opencv2/opencv.hpp:68[m[K,
+                 from [01m[K/home/leoxia/Code/XJTU-RMV-Task05/src/detect_and_solve/include/detect_and_solve/recognition.hpp:4[m[K,
+                 from [01m[K/home/leoxia/Code/XJTU-RMV-Task05/src/detect_and_solve/src/recognition.cpp:7[m[K:
+[01m[K/usr/include/opencv4/opencv2/highgui.hpp:416:19:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid cv::imshow(const String&, cv::InputArray)[m[K’
+  416 | CV_EXPORTS_W void [01;36m[Kimshow[m[K(const String& winname, InputArray mat);
+      |                   [01;36m[K^~~~~~[m[K
+[01m[K/usr/include/opencv4/opencv2/highgui.hpp:416:19:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 1 provided
+[01m[K/usr/include/opencv4/opencv2/highgui.hpp:651:17:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid cv::imshow(const String&, const cv::ogl::Texture2D&)[m[K’
+  651 | CV_EXPORTS void [01;36m[Kimshow[m[K(const String& winname, const ogl::Texture2D& tex);
+      |                 [01;36m[K^~~~~~[m[K
+[01m[K/usr/include/opencv4/opencv2/highgui.hpp:651:17:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 1 provided
+gmake[2]: *** [CMakeFiles/detect_and_solve.dir/build.make:90: CMakeFiles/detect_and_solve.dir/src/recognition.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/detect_and_solve.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

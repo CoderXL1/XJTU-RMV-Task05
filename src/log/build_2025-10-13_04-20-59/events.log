@@ -1,0 +1,299 @@
+[0.000000] (-) TimerEvent: {}
+[0.000630] (detect_and_solve) JobQueued: {'identifier': 'detect_and_solve', 'dependencies': OrderedDict()}
+[0.000722] (hik_camera) JobQueued: {'identifier': 'hik_camera', 'dependencies': OrderedDict()}
+[0.001949] (detect_and_solve) JobStarted: {'identifier': 'detect_and_solve'}
+[0.019626] (hik_camera) JobStarted: {'identifier': 'hik_camera'}
+[0.027547] (detect_and_solve) JobProgress: {'identifier': 'detect_and_solve', 'progress': 'cmake'}
+[0.032213] (detect_and_solve) JobProgress: {'identifier': 'detect_and_solve', 'progress': 'build'}
+[0.032312] (detect_and_solve) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/leoxia/Code/XJTU-RMV-Task05/src/build/detect_and_solve', '--', '-j4', '-l4'], 'cwd': '/home/leoxia/Code/XJTU-RMV-Task05/src/build/detect_and_solve', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LANGUAGE', 'en_US:en'), ('LC_TIME', 'zh_CN.UTF-8'), ('USER', 'leoxia'), ('XDG_SESSION_TYPE', 'wayland'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('ROS_PACKAGE_PATH', '/home/leoxia/Code/XJTU-RMV-Task05/src/install/detect/share'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/leoxia'), ('OLDPWD', '/home/leoxia/Code/XJTU-RMV-Task05'), ('CHROME_DESKTOP', 'code.desktop'), ('LESS', '-R'), ('DESKTOP_SESSION', 'ubuntu'), ('TERM_PROGRAM_VERSION', '1.104.2'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/code.desktop'), ('ZSH', '/home/leoxia/.oh-my-zsh'), ('LSCOLORS', 'Gxfxcxdxbxegedabagacad'), ('GTK_MODULES', 'gail:atk-bridge'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('PAGER', 'less'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('MANAGERPID', '3012'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('SYSTEMD_EXEC_PID', '3154'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '4331'), ('COLORTERM', 'truecolor'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('COLCON_PREFIX_PATH', '/home/leoxia/Code/XJTU-RMV-Task05/src/install'), ('LOGNAME', 'leoxia'), ('_', '/usr/bin/colcon'), ('JOURNAL_STREAM', '8:23847'), ('XDG_SESSION_CLASS', 'user'), ('ROS_VERSION', '2'), ('USER_ZDOTDIR', '/home/leoxia'), ('PKG_CONFIG_PATH', '/home/leoxia/Code/XJTU-RMV-Task05/src/install/detect/lib/x86_64-linux-gnu/pkgconfig:/home/leoxia/Code/XJTU-RMV-Task05/src/install/detect/lib/pkgconfig'), ('USERNAME', 'leoxia'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/leoxia/.config/Code/User/globalStorage/github.copilot-chat/debugCommand'), ('PAPERSIZE', 'a4'), ('SESSION_MANAGER', 'local/leosmacpro-linux:@/tmp/.ICE-unix/3127,unix/leosmacpro-linux:/tmp/.ICE-unix/3127'), ('INVOCATION_ID', '862107e4ab984eab9b8ecc68a404878d'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_SETUP_DISPLAY', ':1'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'Unity'), ('VSCODE_INJECTION', '1'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XMODIFIERS', '@im=ibus'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.63U2D3'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('TERM_PROGRAM', 'vscode'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-ea3d30ca4b.sock'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ORIGINAL_XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('AMENT_PREFIX_PATH', '/home/leoxia/Code/XJTU-RMV-Task05/src/install/hik_camera:/home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve:/opt/ros/humble'), ('LC_NAME', 'zh_CN.UTF-8'), ('SHELL', '/usr/bin/zsh'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('ROS_MASTER_URI', 'http://localhost:11311'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('QT_IM_MODULE', 'ibus'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/leoxia/Code/XJTU-RMV-Task05/src/build/detect_and_solve'), ('XDG_DATA_DIRS', '/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('ZDOTDIR', '/home/leoxia'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('ROS_HOSTNAME', 'localhost'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/leoxia/Code/XJTU-RMV-Task05/src/install/hik_camera:/home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve:/home/leoxia/Code/XJTU-RMV-Task05/src/install/detect:/opt/ros/humble')]), 'shell': False}
+[0.048543] (hik_camera) JobProgress: {'identifier': 'hik_camera', 'progress': 'cmake'}
+[0.056024] (hik_camera) JobProgress: {'identifier': 'hik_camera', 'progress': 'build'}
+[0.056221] (hik_camera) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/leoxia/Code/XJTU-RMV-Task05/src/build/hik_camera', '--', '-j4', '-l4'], 'cwd': '/home/leoxia/Code/XJTU-RMV-Task05/src/build/hik_camera', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LANGUAGE', 'en_US:en'), ('LC_TIME', 'zh_CN.UTF-8'), ('USER', 'leoxia'), ('XDG_SESSION_TYPE', 'wayland'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('ROS_PACKAGE_PATH', '/home/leoxia/Code/XJTU-RMV-Task05/src/install/detect/share'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/leoxia'), ('OLDPWD', '/home/leoxia/Code/XJTU-RMV-Task05'), ('CHROME_DESKTOP', 'code.desktop'), ('LESS', '-R'), ('DESKTOP_SESSION', 'ubuntu'), ('TERM_PROGRAM_VERSION', '1.104.2'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/code.desktop'), ('ZSH', '/home/leoxia/.oh-my-zsh'), ('LSCOLORS', 'Gxfxcxdxbxegedabagacad'), ('GTK_MODULES', 'gail:atk-bridge'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('PAGER', 'less'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('MANAGERPID', '3012'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('SYSTEMD_EXEC_PID', '3154'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '4331'), ('COLORTERM', 'truecolor'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('COLCON_PREFIX_PATH', '/home/leoxia/Code/XJTU-RMV-Task05/src/install'), ('LOGNAME', 'leoxia'), ('_', '/usr/bin/colcon'), ('JOURNAL_STREAM', '8:23847'), ('XDG_SESSION_CLASS', 'user'), ('ROS_VERSION', '2'), ('USER_ZDOTDIR', '/home/leoxia'), ('PKG_CONFIG_PATH', '/home/leoxia/Code/XJTU-RMV-Task05/src/install/detect/lib/x86_64-linux-gnu/pkgconfig:/home/leoxia/Code/XJTU-RMV-Task05/src/install/detect/lib/pkgconfig'), ('USERNAME', 'leoxia'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/leoxia/.config/Code/User/globalStorage/github.copilot-chat/debugCommand'), ('PAPERSIZE', 'a4'), ('SESSION_MANAGER', 'local/leosmacpro-linux:@/tmp/.ICE-unix/3127,unix/leosmacpro-linux:/tmp/.ICE-unix/3127'), ('INVOCATION_ID', '862107e4ab984eab9b8ecc68a404878d'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_SETUP_DISPLAY', ':1'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'Unity'), ('VSCODE_INJECTION', '1'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XMODIFIERS', '@im=ibus'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.63U2D3'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('TERM_PROGRAM', 'vscode'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-ea3d30ca4b.sock'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ORIGINAL_XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('AMENT_PREFIX_PATH', '/home/leoxia/Code/XJTU-RMV-Task05/src/install/hik_camera:/home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve:/opt/ros/humble'), ('LC_NAME', 'zh_CN.UTF-8'), ('SHELL', '/usr/bin/zsh'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('ROS_MASTER_URI', 'http://localhost:11311'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('QT_IM_MODULE', 'ibus'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/leoxia/Code/XJTU-RMV-Task05/src/build/hik_camera'), ('XDG_DATA_DIRS', '/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('ZDOTDIR', '/home/leoxia'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('ROS_HOSTNAME', 'localhost'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/leoxia/Code/XJTU-RMV-Task05/src/install/hik_camera:/home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve:/home/leoxia/Code/XJTU-RMV-Task05/src/install/detect:/opt/ros/humble')]), 'shell': False}
+[0.101185] (-) TimerEvent: {}
+[0.201864] (-) TimerEvent: {}
+[0.207095] (hik_camera) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target hik_camera_node\x1b[0m\n'}
+[0.245436] (detect_and_solve) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object CMakeFiles/detect_and_solve.dir/src/node.cpp.o\x1b[0m\n'}
+[0.247587] (detect_and_solve) StdoutLine: {'line': b'[ 66%] \x1b[32mBuilding CXX object CMakeFiles/detect_and_solve.dir/src/recognition.cpp.o\x1b[0m\n'}
+[0.283580] (hik_camera) StdoutLine: {'line': b'[100%] Built target hik_camera_node\n'}
+[0.302047] (-) TimerEvent: {}
+[0.307209] (hik_camera) CommandEnded: {'returncode': 0}
+[0.310528] (hik_camera) JobProgress: {'identifier': 'hik_camera', 'progress': 'install'}
+[0.333139] (hik_camera) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/leoxia/Code/XJTU-RMV-Task05/src/build/hik_camera'], 'cwd': '/home/leoxia/Code/XJTU-RMV-Task05/src/build/hik_camera', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LANGUAGE', 'en_US:en'), ('LC_TIME', 'zh_CN.UTF-8'), ('USER', 'leoxia'), ('XDG_SESSION_TYPE', 'wayland'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('ROS_PACKAGE_PATH', '/home/leoxia/Code/XJTU-RMV-Task05/src/install/detect/share'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/leoxia'), ('OLDPWD', '/home/leoxia/Code/XJTU-RMV-Task05'), ('CHROME_DESKTOP', 'code.desktop'), ('LESS', '-R'), ('DESKTOP_SESSION', 'ubuntu'), ('TERM_PROGRAM_VERSION', '1.104.2'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/code.desktop'), ('ZSH', '/home/leoxia/.oh-my-zsh'), ('LSCOLORS', 'Gxfxcxdxbxegedabagacad'), ('GTK_MODULES', 'gail:atk-bridge'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('PAGER', 'less'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('MANAGERPID', '3012'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('SYSTEMD_EXEC_PID', '3154'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '4331'), ('COLORTERM', 'truecolor'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('COLCON_PREFIX_PATH', '/home/leoxia/Code/XJTU-RMV-Task05/src/install'), ('LOGNAME', 'leoxia'), ('_', '/usr/bin/colcon'), ('JOURNAL_STREAM', '8:23847'), ('XDG_SESSION_CLASS', 'user'), ('ROS_VERSION', '2'), ('USER_ZDOTDIR', '/home/leoxia'), ('PKG_CONFIG_PATH', '/home/leoxia/Code/XJTU-RMV-Task05/src/install/detect/lib/x86_64-linux-gnu/pkgconfig:/home/leoxia/Code/XJTU-RMV-Task05/src/install/detect/lib/pkgconfig'), ('USERNAME', 'leoxia'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/leoxia/.config/Code/User/globalStorage/github.copilot-chat/debugCommand'), ('PAPERSIZE', 'a4'), ('SESSION_MANAGER', 'local/leosmacpro-linux:@/tmp/.ICE-unix/3127,unix/leosmacpro-linux:/tmp/.ICE-unix/3127'), ('INVOCATION_ID', '862107e4ab984eab9b8ecc68a404878d'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_SETUP_DISPLAY', ':1'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'Unity'), ('VSCODE_INJECTION', '1'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XMODIFIERS', '@im=ibus'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.63U2D3'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('TERM_PROGRAM', 'vscode'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-ea3d30ca4b.sock'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ORIGINAL_XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('AMENT_PREFIX_PATH', '/home/leoxia/Code/XJTU-RMV-Task05/src/install/hik_camera:/home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve:/opt/ros/humble'), ('LC_NAME', 'zh_CN.UTF-8'), ('SHELL', '/usr/bin/zsh'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('ROS_MASTER_URI', 'http://localhost:11311'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('QT_IM_MODULE', 'ibus'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/leoxia/Code/XJTU-RMV-Task05/src/build/hik_camera'), ('XDG_DATA_DIRS', '/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('ZDOTDIR', '/home/leoxia'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('ROS_HOSTNAME', 'localhost'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/leoxia/Code/XJTU-RMV-Task05/src/install/hik_camera:/home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve:/home/leoxia/Code/XJTU-RMV-Task05/src/install/detect:/opt/ros/humble')]), 'shell': False}
+[0.362204] (hik_camera) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.367874] (hik_camera) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[0.369295] (hik_camera) StdoutLine: {'line': b'-- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/src/install/hik_camera/lib/hik_camera/hik_camera_node\n'}
+[0.373913] (hik_camera) StdoutLine: {'line': b'-- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/src/install/hik_camera/share/hik_camera/launch/launch.py\n'}
+[0.375197] (hik_camera) StdoutLine: {'line': b'-- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/src/install/hik_camera/share/ament_index/resource_index/package_run_dependencies/hik_camera\n'}
+[0.376168] (hik_camera) StdoutLine: {'line': b'-- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/src/install/hik_camera/share/ament_index/resource_index/parent_prefix_path/hik_camera\n'}
+[0.378036] (hik_camera) StdoutLine: {'line': b'-- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/src/install/hik_camera/share/hik_camera/environment/ament_prefix_path.sh\n'}
+[0.378225] (hik_camera) StdoutLine: {'line': b'-- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/src/install/hik_camera/share/hik_camera/environment/ament_prefix_path.dsv\n'}
+[0.379842] (hik_camera) StdoutLine: {'line': b'-- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/src/install/hik_camera/share/hik_camera/environment/path.sh\n'}
+[0.380896] (hik_camera) StdoutLine: {'line': b'-- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/src/install/hik_camera/share/hik_camera/environment/path.dsv\n'}
+[0.381718] (hik_camera) StdoutLine: {'line': b'-- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/src/install/hik_camera/share/hik_camera/local_setup.bash\n'}
+[0.383121] (hik_camera) StdoutLine: {'line': b'-- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/src/install/hik_camera/share/hik_camera/local_setup.sh\n'}
+[0.384049] (hik_camera) StdoutLine: {'line': b'-- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/src/install/hik_camera/share/hik_camera/local_setup.zsh\n'}
+[0.384431] (hik_camera) StdoutLine: {'line': b'-- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/src/install/hik_camera/share/hik_camera/local_setup.dsv\n'}
+[0.384562] (hik_camera) StdoutLine: {'line': b'-- Symlinking: /home/leoxia/Code/XJTU-RMV-Task05/src/install/hik_camera/share/hik_camera/package.dsv\n'}
+[0.402302] (-) TimerEvent: {}
+[0.410096] (hik_camera) StdoutLine: {'line': b'-- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/src/install/hik_camera/share/ament_index/resource_index/packages/hik_camera\n'}
+[0.411808] (hik_camera) StdoutLine: {'line': b'-- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/src/install/hik_camera/share/hik_camera/cmake/hik_cameraConfig.cmake\n'}
+[0.412573] (hik_camera) StdoutLine: {'line': b'-- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/src/install/hik_camera/share/hik_camera/cmake/hik_cameraConfig-version.cmake\n'}
+[0.412914] (hik_camera) StdoutLine: {'line': b'-- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/src/install/hik_camera/share/hik_camera/package.xml\n'}
+[0.416303] (hik_camera) CommandEnded: {'returncode': 0}
+[0.498293] (hik_camera) JobEnded: {'identifier': 'hik_camera', 'rc': 0}
+[0.502783] (-) TimerEvent: {}
+[0.605375] (-) TimerEvent: {}
+[0.705918] (-) TimerEvent: {}
+[0.807377] (-) TimerEvent: {}
+[0.908330] (-) TimerEvent: {}
+[1.011666] (-) TimerEvent: {}
+[1.112782] (-) TimerEvent: {}
+[1.213290] (-) TimerEvent: {}
+[1.313802] (-) TimerEvent: {}
+[1.414214] (-) TimerEvent: {}
+[1.515066] (-) TimerEvent: {}
+[1.615889] (-) TimerEvent: {}
+[1.716369] (-) TimerEvent: {}
+[1.817144] (-) TimerEvent: {}
+[1.918355] (-) TimerEvent: {}
+[2.019413] (-) TimerEvent: {}
+[2.120809] (-) TimerEvent: {}
+[2.222157] (-) TimerEvent: {}
+[2.322588] (-) TimerEvent: {}
+[2.423238] (-) TimerEvent: {}
+[2.523799] (-) TimerEvent: {}
+[2.624309] (-) TimerEvent: {}
+[2.724773] (-) TimerEvent: {}
+[2.825900] (-) TimerEvent: {}
+[2.926720] (-) TimerEvent: {}
+[3.027438] (-) TimerEvent: {}
+[3.127852] (-) TimerEvent: {}
+[3.228408] (-) TimerEvent: {}
+[3.330865] (-) TimerEvent: {}
+[3.431588] (-) TimerEvent: {}
+[3.533919] (-) TimerEvent: {}
+[3.634402] (-) TimerEvent: {}
+[3.734853] (-) TimerEvent: {}
+[3.836004] (-) TimerEvent: {}
+[3.937517] (-) TimerEvent: {}
+[4.039077] (-) TimerEvent: {}
+[4.140301] (-) TimerEvent: {}
+[4.240873] (-) TimerEvent: {}
+[4.342819] (-) TimerEvent: {}
+[4.443244] (-) TimerEvent: {}
+[4.544461] (-) TimerEvent: {}
+[4.645280] (-) TimerEvent: {}
+[4.745981] (-) TimerEvent: {}
+[4.846795] (-) TimerEvent: {}
+[4.947439] (-) TimerEvent: {}
+[5.047992] (-) TimerEvent: {}
+[5.148533] (-) TimerEvent: {}
+[5.249107] (-) TimerEvent: {}
+[5.349816] (-) TimerEvent: {}
+[5.450802] (-) TimerEvent: {}
+[5.551574] (-) TimerEvent: {}
+[5.653127] (-) TimerEvent: {}
+[5.753853] (-) TimerEvent: {}
+[5.854819] (-) TimerEvent: {}
+[5.955555] (-) TimerEvent: {}
+[6.056319] (-) TimerEvent: {}
+[6.157905] (-) TimerEvent: {}
+[6.258402] (-) TimerEvent: {}
+[6.359167] (-) TimerEvent: {}
+[6.461007] (-) TimerEvent: {}
+[6.561859] (-) TimerEvent: {}
+[6.664405] (-) TimerEvent: {}
+[6.765632] (-) TimerEvent: {}
+[6.866201] (-) TimerEvent: {}
+[6.966744] (-) TimerEvent: {}
+[7.067303] (-) TimerEvent: {}
+[7.167825] (-) TimerEvent: {}
+[7.268548] (-) TimerEvent: {}
+[7.369358] (-) TimerEvent: {}
+[7.470039] (-) TimerEvent: {}
+[7.549257] (detect_and_solve) StderrLine: {'line': b'\x1b[01m\x1b[K/home/leoxia/Code/XJTU-RMV-Task05/src/detect_and_solve/src/node.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kbool DetectorAndSolver::solve_pnp(cv::RotatedRect&, cv::Mat)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[7.549557] (detect_and_solve) StderrLine: {'line': b'\x1b[01m\x1b[K/home/leoxia/Code/XJTU-RMV-Task05/src/detect_and_solve/src/node.cpp:162:12:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Knarrowing conversion of \xe2\x80\x98\x1b[01m\x1b[K((- w) / (double)2)\x1b[m\x1b[K\xe2\x80\x99 from \xe2\x80\x98\x1b[01m\x1b[Kdouble\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kfloat\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnarrowing\x07-Wnarrowing\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[7.549678] (detect_and_solve) StderrLine: {'line': b'  162 |         {\x1b[01;35m\x1b[K-w/2\x1b[m\x1b[K, -h/2, 0},\n'}
+[7.549902] (detect_and_solve) StderrLine: {'line': b'      |          \x1b[01;35m\x1b[K~~^~\x1b[m\x1b[K\n'}
+[7.550006] (detect_and_solve) StderrLine: {'line': b'\x1b[01m\x1b[K/home/leoxia/Code/XJTU-RMV-Task05/src/detect_and_solve/src/node.cpp:162:18:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Knarrowing conversion of \xe2\x80\x98\x1b[01m\x1b[K((- h) / (double)2)\x1b[m\x1b[K\xe2\x80\x99 from \xe2\x80\x98\x1b[01m\x1b[Kdouble\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kfloat\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnarrowing\x07-Wnarrowing\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[7.550107] (detect_and_solve) StderrLine: {'line': b'  162 |         {-w/2, \x1b[01;35m\x1b[K-h/2\x1b[m\x1b[K, 0},\n'}
+[7.550202] (detect_and_solve) StderrLine: {'line': b'      |                \x1b[01;35m\x1b[K~~^~\x1b[m\x1b[K\n'}
+[7.550292] (detect_and_solve) StderrLine: {'line': b'\x1b[01m\x1b[K/home/leoxia/Code/XJTU-RMV-Task05/src/detect_and_solve/src/node.cpp:163:12:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Knarrowing conversion of \xe2\x80\x98\x1b[01m\x1b[K(((double)w) / (double)2)\x1b[m\x1b[K\xe2\x80\x99 from \xe2\x80\x98\x1b[01m\x1b[Kdouble\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kfloat\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnarrowing\x07-Wnarrowing\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[7.550388] (detect_and_solve) StderrLine: {'line': b'  163 |         { \x1b[01;35m\x1b[Kw/2\x1b[m\x1b[K, -h/2, 0},\n'}
+[7.550494] (detect_and_solve) StderrLine: {'line': b'      |           \x1b[01;35m\x1b[K~^~\x1b[m\x1b[K\n'}
+[7.550593] (detect_and_solve) StderrLine: {'line': b'\x1b[01m\x1b[K/home/leoxia/Code/XJTU-RMV-Task05/src/detect_and_solve/src/node.cpp:163:18:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Knarrowing conversion of \xe2\x80\x98\x1b[01m\x1b[K((- h) / (double)2)\x1b[m\x1b[K\xe2\x80\x99 from \xe2\x80\x98\x1b[01m\x1b[Kdouble\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kfloat\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnarrowing\x07-Wnarrowing\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[7.550689] (detect_and_solve) StderrLine: {'line': b'  163 |         { w/2, \x1b[01;35m\x1b[K-h/2\x1b[m\x1b[K, 0},\n'}
+[7.550925] (detect_and_solve) StderrLine: {'line': b'      |                \x1b[01;35m\x1b[K~~^~\x1b[m\x1b[K\n'}
+[7.551066] (detect_and_solve) StderrLine: {'line': b'\x1b[01m\x1b[K/home/leoxia/Code/XJTU-RMV-Task05/src/detect_and_solve/src/node.cpp:164:12:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Knarrowing conversion of \xe2\x80\x98\x1b[01m\x1b[K(((double)w) / (double)2)\x1b[m\x1b[K\xe2\x80\x99 from \xe2\x80\x98\x1b[01m\x1b[Kdouble\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kfloat\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnarrowing\x07-Wnarrowing\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[7.551182] (detect_and_solve) StderrLine: {'line': b'  164 |         { \x1b[01;35m\x1b[Kw/2\x1b[m\x1b[K,  h/2, 0},\n'}
+[7.551336] (detect_and_solve) StderrLine: {'line': b'      |           \x1b[01;35m\x1b[K~^~\x1b[m\x1b[K\n'}
+[7.551445] (detect_and_solve) StderrLine: {'line': b'\x1b[01m\x1b[K/home/leoxia/Code/XJTU-RMV-Task05/src/detect_and_solve/src/node.cpp:164:18:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Knarrowing conversion of \xe2\x80\x98\x1b[01m\x1b[K(((double)h) / (double)2)\x1b[m\x1b[K\xe2\x80\x99 from \xe2\x80\x98\x1b[01m\x1b[Kdouble\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kfloat\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnarrowing\x07-Wnarrowing\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[7.551545] (detect_and_solve) StderrLine: {'line': b'  164 |         { w/2,  \x1b[01;35m\x1b[Kh/2\x1b[m\x1b[K, 0},\n'}
+[7.551637] (detect_and_solve) StderrLine: {'line': b'      |                 \x1b[01;35m\x1b[K~^~\x1b[m\x1b[K\n'}
+[7.551906] (detect_and_solve) StderrLine: {'line': b'\x1b[01m\x1b[K/home/leoxia/Code/XJTU-RMV-Task05/src/detect_and_solve/src/node.cpp:165:12:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Knarrowing conversion of \xe2\x80\x98\x1b[01m\x1b[K((- w) / (double)2)\x1b[m\x1b[K\xe2\x80\x99 from \xe2\x80\x98\x1b[01m\x1b[Kdouble\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kfloat\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnarrowing\x07-Wnarrowing\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[7.552044] (detect_and_solve) StderrLine: {'line': b'  165 |         {\x1b[01;35m\x1b[K-w/2\x1b[m\x1b[K,  h/2, 0}\n'}
+[7.552146] (detect_and_solve) StderrLine: {'line': b'      |          \x1b[01;35m\x1b[K~~^~\x1b[m\x1b[K\n'}
+[7.552239] (detect_and_solve) StderrLine: {'line': b'\x1b[01m\x1b[K/home/leoxia/Code/XJTU-RMV-Task05/src/detect_and_solve/src/node.cpp:165:18:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Knarrowing conversion of \xe2\x80\x98\x1b[01m\x1b[K(((double)h) / (double)2)\x1b[m\x1b[K\xe2\x80\x99 from \xe2\x80\x98\x1b[01m\x1b[Kdouble\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kfloat\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnarrowing\x07-Wnarrowing\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[7.552353] (detect_and_solve) StderrLine: {'line': b'  165 |         {-w/2,  \x1b[01;35m\x1b[Kh/2\x1b[m\x1b[K, 0}\n'}
+[7.552447] (detect_and_solve) StderrLine: {'line': b'      |                 \x1b[01;35m\x1b[K~^~\x1b[m\x1b[K\n'}
+[7.570336] (-) TimerEvent: {}
+[7.670898] (-) TimerEvent: {}
+[7.771519] (-) TimerEvent: {}
+[7.872272] (-) TimerEvent: {}
+[7.972859] (-) TimerEvent: {}
+[8.073326] (-) TimerEvent: {}
+[8.174028] (-) TimerEvent: {}
+[8.274728] (-) TimerEvent: {}
+[8.375293] (-) TimerEvent: {}
+[8.475860] (-) TimerEvent: {}
+[8.576317] (-) TimerEvent: {}
+[8.676792] (-) TimerEvent: {}
+[8.777316] (-) TimerEvent: {}
+[8.878072] (-) TimerEvent: {}
+[8.978909] (-) TimerEvent: {}
+[9.079828] (-) TimerEvent: {}
+[9.180290] (-) TimerEvent: {}
+[9.282594] (-) TimerEvent: {}
+[9.384120] (-) TimerEvent: {}
+[9.485087] (-) TimerEvent: {}
+[9.587984] (-) TimerEvent: {}
+[9.688507] (-) TimerEvent: {}
+[9.789135] (-) TimerEvent: {}
+[9.891072] (-) TimerEvent: {}
+[9.993507] (-) TimerEvent: {}
+[10.094231] (-) TimerEvent: {}
+[10.195045] (-) TimerEvent: {}
+[10.295875] (-) TimerEvent: {}
+[10.396576] (-) TimerEvent: {}
+[10.497303] (-) TimerEvent: {}
+[10.598045] (-) TimerEvent: {}
+[10.698910] (-) TimerEvent: {}
+[10.799633] (-) TimerEvent: {}
+[10.900772] (-) TimerEvent: {}
+[11.001316] (-) TimerEvent: {}
+[11.101882] (-) TimerEvent: {}
+[11.202388] (-) TimerEvent: {}
+[11.302863] (-) TimerEvent: {}
+[11.403401] (-) TimerEvent: {}
+[11.503983] (-) TimerEvent: {}
+[11.604768] (-) TimerEvent: {}
+[11.611023] (detect_and_solve) StderrLine: {'line': b'\x1b[01m\x1b[K/home/leoxia/Code/XJTU-RMV-Task05/src/detect_and_solve/src/node.cpp:263:3:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcontrol reaches end of non-void function [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreturn-type\x07-Wreturn-type\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[11.611304] (detect_and_solve) StderrLine: {'line': b'  263 |   \x1b[01;35m\x1b[K}\x1b[m\x1b[K\n'}
+[11.611425] (detect_and_solve) StderrLine: {'line': b'      |   \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[11.704964] (-) TimerEvent: {}
+[11.805724] (-) TimerEvent: {}
+[11.906488] (-) TimerEvent: {}
+[12.007543] (-) TimerEvent: {}
+[12.108548] (-) TimerEvent: {}
+[12.209492] (-) TimerEvent: {}
+[12.310506] (-) TimerEvent: {}
+[12.411555] (-) TimerEvent: {}
+[12.512546] (-) TimerEvent: {}
+[12.613417] (-) TimerEvent: {}
+[12.714195] (-) TimerEvent: {}
+[12.814791] (-) TimerEvent: {}
+[12.915592] (-) TimerEvent: {}
+[13.016484] (-) TimerEvent: {}
+[13.117435] (-) TimerEvent: {}
+[13.218341] (-) TimerEvent: {}
+[13.319186] (-) TimerEvent: {}
+[13.420091] (-) TimerEvent: {}
+[13.520535] (-) TimerEvent: {}
+[13.621578] (-) TimerEvent: {}
+[13.722526] (-) TimerEvent: {}
+[13.823448] (-) TimerEvent: {}
+[13.924066] (-) TimerEvent: {}
+[14.024518] (-) TimerEvent: {}
+[14.125567] (-) TimerEvent: {}
+[14.226772] (-) TimerEvent: {}
+[14.327765] (-) TimerEvent: {}
+[14.428595] (-) TimerEvent: {}
+[14.529757] (-) TimerEvent: {}
+[14.630425] (-) TimerEvent: {}
+[14.731209] (-) TimerEvent: {}
+[14.832001] (-) TimerEvent: {}
+[14.932784] (-) TimerEvent: {}
+[15.033615] (-) TimerEvent: {}
+[15.134249] (-) TimerEvent: {}
+[15.235037] (-) TimerEvent: {}
+[15.335800] (-) TimerEvent: {}
+[15.436760] (-) TimerEvent: {}
+[15.538006] (-) TimerEvent: {}
+[15.639127] (-) TimerEvent: {}
+[15.739983] (-) TimerEvent: {}
+[15.840737] (-) TimerEvent: {}
+[15.941590] (-) TimerEvent: {}
+[16.042565] (-) TimerEvent: {}
+[16.143175] (-) TimerEvent: {}
+[16.243749] (-) TimerEvent: {}
+[16.344428] (-) TimerEvent: {}
+[16.445152] (-) TimerEvent: {}
+[16.546797] (-) TimerEvent: {}
+[16.648309] (-) TimerEvent: {}
+[16.749031] (-) TimerEvent: {}
+[16.849810] (-) TimerEvent: {}
+[16.950874] (-) TimerEvent: {}
+[17.051559] (-) TimerEvent: {}
+[17.152284] (-) TimerEvent: {}
+[17.252854] (-) TimerEvent: {}
+[17.353500] (-) TimerEvent: {}
+[17.454219] (-) TimerEvent: {}
+[17.554892] (-) TimerEvent: {}
+[17.655414] (-) TimerEvent: {}
+[17.756301] (-) TimerEvent: {}
+[17.857154] (-) TimerEvent: {}
+[17.957656] (-) TimerEvent: {}
+[18.058239] (-) TimerEvent: {}
+[18.158845] (-) TimerEvent: {}
+[18.259324] (-) TimerEvent: {}
+[18.359780] (-) TimerEvent: {}
+[18.460213] (-) TimerEvent: {}
+[18.560703] (-) TimerEvent: {}
+[18.661169] (-) TimerEvent: {}
+[18.762024] (-) TimerEvent: {}
+[18.840035] (detect_and_solve) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable detect_and_solve\x1b[0m\n'}
+[18.862232] (-) TimerEvent: {}
+[18.962646] (-) TimerEvent: {}
+[19.063226] (-) TimerEvent: {}
+[19.163800] (-) TimerEvent: {}
+[19.264556] (-) TimerEvent: {}
+[19.365388] (-) TimerEvent: {}
+[19.466881] (-) TimerEvent: {}
+[19.567564] (-) TimerEvent: {}
+[19.668288] (-) TimerEvent: {}
+[19.768814] (-) TimerEvent: {}
+[19.869367] (-) TimerEvent: {}
+[19.970006] (-) TimerEvent: {}
+[20.070832] (-) TimerEvent: {}
+[20.171480] (-) TimerEvent: {}
+[20.272338] (-) TimerEvent: {}
+[20.373174] (-) TimerEvent: {}
+[20.426433] (detect_and_solve) StdoutLine: {'line': b'[100%] Built target detect_and_solve\n'}
+[20.449314] (detect_and_solve) CommandEnded: {'returncode': 0}
+[20.453573] (detect_and_solve) JobProgress: {'identifier': 'detect_and_solve', 'progress': 'install'}
+[20.455386] (detect_and_solve) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/leoxia/Code/XJTU-RMV-Task05/src/build/detect_and_solve'], 'cwd': '/home/leoxia/Code/XJTU-RMV-Task05/src/build/detect_and_solve', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LANGUAGE', 'en_US:en'), ('LC_TIME', 'zh_CN.UTF-8'), ('USER', 'leoxia'), ('XDG_SESSION_TYPE', 'wayland'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('ROS_PACKAGE_PATH', '/home/leoxia/Code/XJTU-RMV-Task05/src/install/detect/share'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/leoxia'), ('OLDPWD', '/home/leoxia/Code/XJTU-RMV-Task05'), ('CHROME_DESKTOP', 'code.desktop'), ('LESS', '-R'), ('DESKTOP_SESSION', 'ubuntu'), ('TERM_PROGRAM_VERSION', '1.104.2'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/code.desktop'), ('ZSH', '/home/leoxia/.oh-my-zsh'), ('LSCOLORS', 'Gxfxcxdxbxegedabagacad'), ('GTK_MODULES', 'gail:atk-bridge'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('PAGER', 'less'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('MANAGERPID', '3012'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('SYSTEMD_EXEC_PID', '3154'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '4331'), ('COLORTERM', 'truecolor'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('COLCON_PREFIX_PATH', '/home/leoxia/Code/XJTU-RMV-Task05/src/install'), ('LOGNAME', 'leoxia'), ('_', '/usr/bin/colcon'), ('JOURNAL_STREAM', '8:23847'), ('XDG_SESSION_CLASS', 'user'), ('ROS_VERSION', '2'), ('USER_ZDOTDIR', '/home/leoxia'), ('PKG_CONFIG_PATH', '/home/leoxia/Code/XJTU-RMV-Task05/src/install/detect/lib/x86_64-linux-gnu/pkgconfig:/home/leoxia/Code/XJTU-RMV-Task05/src/install/detect/lib/pkgconfig'), ('USERNAME', 'leoxia'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/leoxia/.config/Code/User/globalStorage/github.copilot-chat/debugCommand'), ('PAPERSIZE', 'a4'), ('SESSION_MANAGER', 'local/leosmacpro-linux:@/tmp/.ICE-unix/3127,unix/leosmacpro-linux:/tmp/.ICE-unix/3127'), ('INVOCATION_ID', '862107e4ab984eab9b8ecc68a404878d'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_SETUP_DISPLAY', ':1'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'Unity'), ('VSCODE_INJECTION', '1'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XMODIFIERS', '@im=ibus'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.63U2D3'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('TERM_PROGRAM', 'vscode'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-ea3d30ca4b.sock'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ORIGINAL_XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('AMENT_PREFIX_PATH', '/home/leoxia/Code/XJTU-RMV-Task05/src/install/hik_camera:/home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve:/opt/ros/humble'), ('LC_NAME', 'zh_CN.UTF-8'), ('SHELL', '/usr/bin/zsh'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('ROS_MASTER_URI', 'http://localhost:11311'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('QT_IM_MODULE', 'ibus'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/leoxia/Code/XJTU-RMV-Task05/src/build/detect_and_solve'), ('XDG_DATA_DIRS', '/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('ZDOTDIR', '/home/leoxia'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('ROS_HOSTNAME', 'localhost'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/leoxia/Code/XJTU-RMV-Task05/src/install/hik_camera:/home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve:/home/leoxia/Code/XJTU-RMV-Task05/src/install/detect:/opt/ros/humble')]), 'shell': False}
+[20.468410] (detect_and_solve) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[20.469886] (detect_and_solve) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[20.471311] (detect_and_solve) StdoutLine: {'line': b'-- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/lib/detect_and_solve/detect_and_solve\n'}
+[20.471900] (detect_and_solve) StdoutLine: {'line': b'-- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/include/detect_and_solve/recognition.hpp\n'}
+[20.473355] (-) TimerEvent: {}
+[20.473774] (detect_and_solve) StdoutLine: {'line': b'-- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/share/detect_and_solve/launch/launch.py\n'}
+[20.474217] (detect_and_solve) StdoutLine: {'line': b'-- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/share/detect_and_solve/config/camera.yaml\n'}
+[20.474426] (detect_and_solve) StdoutLine: {'line': b'-- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/share/ament_index/resource_index/package_run_dependencies/detect_and_solve\n'}
+[20.474952] (detect_and_solve) StdoutLine: {'line': b'-- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/share/ament_index/resource_index/parent_prefix_path/detect_and_solve\n'}
+[20.475429] (detect_and_solve) StdoutLine: {'line': b'-- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/share/detect_and_solve/environment/ament_prefix_path.sh\n'}
+[20.475950] (detect_and_solve) StdoutLine: {'line': b'-- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/share/detect_and_solve/environment/ament_prefix_path.dsv\n'}
+[20.476439] (detect_and_solve) StdoutLine: {'line': b'-- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/share/detect_and_solve/environment/path.sh\n'}
+[20.476915] (detect_and_solve) StdoutLine: {'line': b'-- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/share/detect_and_solve/environment/path.dsv\n'}
+[20.477389] (detect_and_solve) StdoutLine: {'line': b'-- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/share/detect_and_solve/local_setup.bash\n'}
+[20.477885] (detect_and_solve) StdoutLine: {'line': b'-- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/share/detect_and_solve/local_setup.sh\n'}
+[20.478335] (detect_and_solve) StdoutLine: {'line': b'-- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/share/detect_and_solve/local_setup.zsh\n'}
+[20.479095] (detect_and_solve) StdoutLine: {'line': b'-- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/share/detect_and_solve/local_setup.dsv\n'}
+[20.480828] (detect_and_solve) StdoutLine: {'line': b'-- Symlinking: /home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/share/detect_and_solve/package.dsv\n'}
+[20.498329] (detect_and_solve) StdoutLine: {'line': b'-- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/share/ament_index/resource_index/packages/detect_and_solve\n'}
+[20.499452] (detect_and_solve) StdoutLine: {'line': b'-- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/share/detect_and_solve/cmake/detect_and_solveConfig.cmake\n'}
+[20.500206] (detect_and_solve) StdoutLine: {'line': b'-- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/share/detect_and_solve/cmake/detect_and_solveConfig-version.cmake\n'}
+[20.500992] (detect_and_solve) StdoutLine: {'line': b'-- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/share/detect_and_solve/package.xml\n'}
+[20.504984] (detect_and_solve) CommandEnded: {'returncode': 0}
+[20.540954] (detect_and_solve) JobEnded: {'identifier': 'detect_and_solve', 'rc': 0}
+[20.542485] (-) EventReactorShutdown: {}

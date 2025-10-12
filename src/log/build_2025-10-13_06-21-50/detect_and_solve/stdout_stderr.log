@@ -1,0 +1,43 @@
+[35m[1mConsolidate compiler generated dependencies of target detect_and_solve[0m
+[ 33%] [32mBuilding CXX object CMakeFiles/detect_and_solve.dir/src/node.cpp.o[0m
+[01m[K/home/leoxia/Code/XJTU-RMV-Task05/src/detect_and_solve/src/node.cpp:[m[K In constructor ‘[01m[KDetectorAndSolver::DetectorAndSolver()[m[K’:
+[01m[K/home/leoxia/Code/XJTU-RMV-Task05/src/detect_and_solve/src/node.cpp:34:16:[m[K [01;31m[Kerror: [m[K‘[01m[Kcamera_yaml[m[K’ was not declared in this scope; did you mean ‘[01m[Kcamera_yaml_[m[K’?
+   34 |     std::cout<<[01;31m[Kcamera_yaml[m[K<<std::endl;//print!
+      |                [01;31m[K^~~~~~~~~~~[m[K
+      |                [32m[Kcamera_yaml_[m[K
+[01m[K/home/leoxia/Code/XJTU-RMV-Task05/src/detect_and_solve/src/node.cpp:[m[K In member function ‘[01m[Kbool DetectorAndSolver::solve_pnp(cv::RotatedRect&, cv::Mat)[m[K’:
+[01m[K/home/leoxia/Code/XJTU-RMV-Task05/src/detect_and_solve/src/node.cpp:143:12:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[K((- w) / (double)2)[m[K’ from ‘[01m[Kdouble[m[K’ to ‘[01m[Kfloat[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnarrowing-Wnarrowing]8;;[m[K]
+  143 |         {[01;35m[K-w/2[m[K, -h/2, 0},
+      |          [01;35m[K~~^~[m[K
+[01m[K/home/leoxia/Code/XJTU-RMV-Task05/src/detect_and_solve/src/node.cpp:143:18:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[K((- h) / (double)2)[m[K’ from ‘[01m[Kdouble[m[K’ to ‘[01m[Kfloat[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnarrowing-Wnarrowing]8;;[m[K]
+  143 |         {-w/2, [01;35m[K-h/2[m[K, 0},
+      |                [01;35m[K~~^~[m[K
+[01m[K/home/leoxia/Code/XJTU-RMV-Task05/src/detect_and_solve/src/node.cpp:144:12:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[K(((double)w) / (double)2)[m[K’ from ‘[01m[Kdouble[m[K’ to ‘[01m[Kfloat[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnarrowing-Wnarrowing]8;;[m[K]
+  144 |         { [01;35m[Kw/2[m[K, -h/2, 0},
+      |           [01;35m[K~^~[m[K
+[01m[K/home/leoxia/Code/XJTU-RMV-Task05/src/detect_and_solve/src/node.cpp:144:18:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[K((- h) / (double)2)[m[K’ from ‘[01m[Kdouble[m[K’ to ‘[01m[Kfloat[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnarrowing-Wnarrowing]8;;[m[K]
+  144 |         { w/2, [01;35m[K-h/2[m[K, 0},
+      |                [01;35m[K~~^~[m[K
+[01m[K/home/leoxia/Code/XJTU-RMV-Task05/src/detect_and_solve/src/node.cpp:145:12:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[K(((double)w) / (double)2)[m[K’ from ‘[01m[Kdouble[m[K’ to ‘[01m[Kfloat[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnarrowing-Wnarrowing]8;;[m[K]
+  145 |         { [01;35m[Kw/2[m[K,  h/2, 0},
+      |           [01;35m[K~^~[m[K
+[01m[K/home/leoxia/Code/XJTU-RMV-Task05/src/detect_and_solve/src/node.cpp:145:18:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[K(((double)h) / (double)2)[m[K’ from ‘[01m[Kdouble[m[K’ to ‘[01m[Kfloat[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnarrowing-Wnarrowing]8;;[m[K]
+  145 |         { w/2,  [01;35m[Kh/2[m[K, 0},
+      |                 [01;35m[K~^~[m[K
+[01m[K/home/leoxia/Code/XJTU-RMV-Task05/src/detect_and_solve/src/node.cpp:146:12:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[K((- w) / (double)2)[m[K’ from ‘[01m[Kdouble[m[K’ to ‘[01m[Kfloat[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnarrowing-Wnarrowing]8;;[m[K]
+  146 |         {[01;35m[K-w/2[m[K,  h/2, 0}
+      |          [01;35m[K~~^~[m[K
+[01m[K/home/leoxia/Code/XJTU-RMV-Task05/src/detect_and_solve/src/node.cpp:146:18:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[K(((double)h) / (double)2)[m[K’ from ‘[01m[Kdouble[m[K’ to ‘[01m[Kfloat[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnarrowing-Wnarrowing]8;;[m[K]
+  146 |         {-w/2,  [01;35m[Kh/2[m[K, 0}
+      |                 [01;35m[K~^~[m[K
+[01m[K/home/leoxia/Code/XJTU-RMV-Task05/src/detect_and_solve/src/node.cpp:[m[K In member function ‘[01m[Kvoid DetectorAndSolver::videoProcess()[m[K’:
+[01m[K/home/leoxia/Code/XJTU-RMV-Task05/src/detect_and_solve/src/node.cpp:295:25:[m[K [01;31m[Kerror: [m[K‘[01m[Kcap_[m[K’ was not declared in this scope
+  295 |     while(rclcpp::ok()&&[01;31m[Kcap_[m[K.read(frame))
+      |                         [01;31m[K^~~~[m[K
+[01m[K/home/leoxia/Code/XJTU-RMV-Task05/src/detect_and_solve/src/node.cpp:[m[K In member function ‘[01m[Kbool DetectorAndSolver::solve_pnp(cv::RotatedRect&, cv::Mat)[m[K’:
+[01m[K/home/leoxia/Code/XJTU-RMV-Task05/src/detect_and_solve/src/node.cpp:243:3:[m[K [01;35m[Kwarning: [m[Kcontrol reaches end of non-void function [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreturn-type-Wreturn-type]8;;[m[K]
+  243 |   [01;35m[K}[m[K
+      |   [01;35m[K^[m[K
+gmake[2]: *** [CMakeFiles/detect_and_solve.dir/build.make:76: CMakeFiles/detect_and_solve.dir/src/node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/detect_and_solve.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2
