@@ -1,4 +1,0 @@
-Invoking command in '/home/leoxia/Code/XJTU-RMV-Task05/src/build/detect': /usr/bin/cmake --build /home/leoxia/Code/XJTU-RMV-Task05/src/build/detect -- -j4 -l4
-Invoked command in '/home/leoxia/Code/XJTU-RMV-Task05/src/build/detect' returned '0': /usr/bin/cmake --build /home/leoxia/Code/XJTU-RMV-Task05/src/build/detect -- -j4 -l4
-Invoking command in '/home/leoxia/Code/XJTU-RMV-Task05/src/build/detect': /usr/bin/cmake --install /home/leoxia/Code/XJTU-RMV-Task05/src/build/detect
-Invoked command in '/home/leoxia/Code/XJTU-RMV-Task05/src/build/detect' returned '0': /usr/bin/cmake --install /home/leoxia/Code/XJTU-RMV-Task05/src/build/detect

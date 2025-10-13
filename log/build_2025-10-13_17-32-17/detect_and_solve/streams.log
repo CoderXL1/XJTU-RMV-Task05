@@ -1,0 +1,28 @@
+[0.033s] Invoking command in '/home/leoxia/Code/XJTU-RMV-Task05/build/detect_and_solve': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/leoxia/Code/XJTU-RMV-Task05/build/detect_and_solve -- -j4 -l4
+[0.209s] [35m[1mConsolidate compiler generated dependencies of target detect_and_solve[0m
+[0.275s] [100%] Built target detect_and_solve
+[0.330s] Invoked command in '/home/leoxia/Code/XJTU-RMV-Task05/build/detect_and_solve' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/leoxia/Code/XJTU-RMV-Task05/build/detect_and_solve -- -j4 -l4
+[0.337s] Invoking command in '/home/leoxia/Code/XJTU-RMV-Task05/build/detect_and_solve': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/leoxia/Code/XJTU-RMV-Task05/build/detect_and_solve
+[0.363s] -- Install configuration: "Debug"
+[0.366s] -- Execute custom install script
+[0.366s] -- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/install/detect_and_solve/lib/detect_and_solve/detect_and_solve
+[0.367s] -- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/install/detect_and_solve/include/detect_and_solve/recognition.hpp
+[0.368s] -- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/install/detect_and_solve/share/detect_and_solve/launch/launch.py
+[0.368s] -- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/install/detect_and_solve/share/detect_and_solve/config/camera.json
+[0.369s] -- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/install/detect_and_solve/share/detect_and_solve/config/camera.yaml
+[0.370s] -- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/install/detect_and_solve/share/ament_index/resource_index/package_run_dependencies/detect_and_solve
+[0.370s] -- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/install/detect_and_solve/share/ament_index/resource_index/parent_prefix_path/detect_and_solve
+[0.371s] -- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/install/detect_and_solve/share/detect_and_solve/environment/ament_prefix_path.sh
+[0.372s] -- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/install/detect_and_solve/share/detect_and_solve/environment/ament_prefix_path.dsv
+[0.374s] -- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/install/detect_and_solve/share/detect_and_solve/environment/path.sh
+[0.374s] -- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/install/detect_and_solve/share/detect_and_solve/environment/path.dsv
+[0.375s] -- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/install/detect_and_solve/share/detect_and_solve/local_setup.bash
+[0.375s] -- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/install/detect_and_solve/share/detect_and_solve/local_setup.sh
+[0.379s] -- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/install/detect_and_solve/share/detect_and_solve/local_setup.zsh
+[0.379s] -- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/install/detect_and_solve/share/detect_and_solve/local_setup.dsv
+[0.379s] -- Symlinking: /home/leoxia/Code/XJTU-RMV-Task05/install/detect_and_solve/share/detect_and_solve/package.dsv
+[0.406s] -- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/install/detect_and_solve/share/ament_index/resource_index/packages/detect_and_solve
+[0.407s] -- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/install/detect_and_solve/share/detect_and_solve/cmake/detect_and_solveConfig.cmake
+[0.407s] -- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/install/detect_and_solve/share/detect_and_solve/cmake/detect_and_solveConfig-version.cmake
+[0.407s] -- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/install/detect_and_solve/share/detect_and_solve/package.xml
+[0.429s] Invoked command in '/home/leoxia/Code/XJTU-RMV-Task05/build/detect_and_solve' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/leoxia/Code/XJTU-RMV-Task05/build/detect_and_solve

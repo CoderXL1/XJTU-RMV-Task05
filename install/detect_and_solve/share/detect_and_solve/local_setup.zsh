@@ -1,0 +1,1 @@
+/home/leoxia/Code/XJTU-RMV-Task05/build/detect_and_solve/ament_cmake_environment_hooks/local_setup.zsh

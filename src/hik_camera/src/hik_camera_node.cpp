@@ -127,7 +127,7 @@ public:
     // 使用 cv_bridge 转换成 ROS2 消息
     std_msgs::msg::Header header;
     header.stamp = self->now();
-    header.frame_id = "camera_frame";
+    header.frame_id = "camera_link";
 
     auto msg = cv_bridge::CvImage(header, encoding, image).toImageMsg();
     //Key Debugging information

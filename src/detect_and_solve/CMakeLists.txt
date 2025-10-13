@@ -1,6 +1,8 @@
 cmake_minimum_required(VERSION 3.8)
 project(detect_and_solve)
 
+# set(CMAKE_BUILD_TYPE Debug)
+
 if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
   add_compile_options(-Wall -Wextra -Wpedantic)
 endif()
@@ -18,9 +20,12 @@ find_package(std_msgs REQUIRED)
 find_package(cv_bridge REQUIRED)
 find_package(sensor_msgs REQUIRED)
 find_package(OpenCV REQUIRED)
+find_package(tf2 REQUIRED)
+find_package(tf2_geometry_msgs REQUIRED)
 
 # executable
 add_executable(detect_and_solve
+  src/util.cpp
   src/node.cpp
   src/recognition.cpp
 )
@@ -36,6 +41,8 @@ ament_target_dependencies(detect_and_solve
   std_msgs
   cv_bridge
   sensor_msgs
+  tf2
+  tf2_geometry_msgs
 )
 
 # install

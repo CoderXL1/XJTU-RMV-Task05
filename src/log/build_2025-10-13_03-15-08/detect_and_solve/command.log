@@ -1,6 +1,0 @@
-Invoking command in '/home/leoxia/Code/XJTU-RMV-Task05/src/build/detect_and_solve': /usr/bin/cmake /home/leoxia/Code/XJTU-RMV-Task05/src/detect_and_solve -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCATKIN_SYMLINK_INSTALL=ON -DCMAKE_INSTALL_PREFIX=/home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve
-Invoked command in '/home/leoxia/Code/XJTU-RMV-Task05/src/build/detect_and_solve' returned '0': /usr/bin/cmake /home/leoxia/Code/XJTU-RMV-Task05/src/detect_and_solve -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCATKIN_SYMLINK_INSTALL=ON -DCMAKE_INSTALL_PREFIX=/home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve
-Invoking command in '/home/leoxia/Code/XJTU-RMV-Task05/src/build/detect_and_solve': /usr/bin/cmake --build /home/leoxia/Code/XJTU-RMV-Task05/src/build/detect_and_solve -- -j4 -l4
-Invoked command in '/home/leoxia/Code/XJTU-RMV-Task05/src/build/detect_and_solve' returned '0': /usr/bin/cmake --build /home/leoxia/Code/XJTU-RMV-Task05/src/build/detect_and_solve -- -j4 -l4
-Invoking command in '/home/leoxia/Code/XJTU-RMV-Task05/src/build/detect_and_solve': /usr/bin/cmake --install /home/leoxia/Code/XJTU-RMV-Task05/src/build/detect_and_solve
-Invoked command in '/home/leoxia/Code/XJTU-RMV-Task05/src/build/detect_and_solve' returned '1': /usr/bin/cmake --install /home/leoxia/Code/XJTU-RMV-Task05/src/build/detect_and_solve

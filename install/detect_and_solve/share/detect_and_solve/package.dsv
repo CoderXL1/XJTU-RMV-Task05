@@ -1,0 +1,8 @@
+source;share/detect_and_solve/hook/cmake_prefix_path.ps1
+source;share/detect_and_solve/hook/cmake_prefix_path.dsv
+source;share/detect_and_solve/hook/cmake_prefix_path.sh
+source;share/detect_and_solve/local_setup.bash
+source;share/detect_and_solve/local_setup.dsv
+source;share/detect_and_solve/local_setup.ps1
+source;share/detect_and_solve/local_setup.sh
+source;share/detect_and_solve/local_setup.zsh

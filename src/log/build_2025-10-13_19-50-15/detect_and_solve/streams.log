@@ -1,0 +1,9 @@
+[0.034s] Invoking command in '/home/leoxia/Code/XJTU-RMV-Task05/src/build/detect_and_solve': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/leoxia/Code/XJTU-RMV-Task05/src/build/detect_and_solve -- -j4 -l4
+[0.123s] [35m[1mConsolidate compiler generated dependencies of target detect_and_solve[0m
+[0.181s] [ 25%] [32mBuilding CXX object CMakeFiles/detect_and_solve.dir/src/node.cpp.o[0m
+[1.781s] gmake[2]: *** wait: No child processes.  Stop.
+[1.782s] gmake[2]: *** Waiting for unfinished jobs....
+[1.783s] gmake[2]: *** wait: No child processes.  Stop.
+[1.783s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/detect_and_solve.dir/all] Error 2
+[1.783s] gmake: *** [Makefile:146: all] Interrupt
+[1.796s] Invoked command in '/home/leoxia/Code/XJTU-RMV-Task05/src/build/detect_and_solve' returned '-2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/leoxia/Code/XJTU-RMV-Task05/src/build/detect_and_solve -- -j4 -l4
