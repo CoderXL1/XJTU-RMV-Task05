@@ -1,7 +1,0 @@
-[ 33%] [32mBuilding CXX object CMakeFiles/hik_camera_node.dir/src/hik_camera_node.cpp.o[0m
-[01m[K/home/leoxia/Code/XJTU-RMV-Task05/src/hik_camera/src/hik_camera_node.cpp:[m[K In member function ‘[01m[Krcl_interfaces::msg::SetParametersResult HikCameraNode::onParamChange(const std::vector<rclcpp::Parameter>&)[m[K’:
-[01m[K/home/leoxia/Code/XJTU-RMV-Task05/src/hik_camera/src/hik_camera_node.cpp:83:55:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kparams[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
-   83 |   onParamChange([01;35m[Kconst std::vector<rclcpp::Parameter> &params[m[K)
-      |                 [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~[m[K
-[ 66%] [32m[1mLinking CXX executable hik_camera_node[0m
-[100%] Built target hik_camera_node

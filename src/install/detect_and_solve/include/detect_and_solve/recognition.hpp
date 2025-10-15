@@ -1,1 +1,0 @@
-/home/leoxia/Code/XJTU-RMV-Task05/src/detect_and_solve/include/detect_and_solve/recognition.hpp

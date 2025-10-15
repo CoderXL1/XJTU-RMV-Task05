@@ -1,1 +1,0 @@
-/home/leoxia/Code/XJTU-RMV-Task05/src/build/hik_camera/ament_cmake_core/hik_cameraConfig-version.cmake
