@@ -1,1 +1,1 @@
-cv_bridge:opencv4:rclcpp:sensor_msgs:std_msgs
+cv_bridge:nlohmann-json3-dev:onnxruntime:opencv4:rclcpp:sensor_msgs:std_msgs

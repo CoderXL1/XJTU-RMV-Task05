@@ -22,17 +22,20 @@ find_package(sensor_msgs REQUIRED)
 find_package(OpenCV REQUIRED)
 find_package(tf2 REQUIRED)
 find_package(tf2_geometry_msgs REQUIRED)
+find_package(nlohmann_json REQUIRED)
 
 # executable
 add_executable(detect_and_solve
   src/util.cpp
   src/node.cpp
   src/recognition.cpp
+  src/model_runtime.cpp
 )
 
 # link libraries
 target_link_libraries(detect_and_solve
   ${OpenCV_LIBS}
+  nlohmann_json::nlohmann_json
 )
 
 # ament dependencies

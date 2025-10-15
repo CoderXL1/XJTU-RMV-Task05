@@ -15,6 +15,9 @@
   <depend>std_msgs</depend>
   <depend>sensor_msgs</depend>
   <depend>cv_bridge</depend>
+  <depend>nlohmann-json3-dev</depend>
+  <exec_depend>onnxruntime</exec_depend>
+
 
   <!-- OpenCV -->
   <depend>opencv4</depend>

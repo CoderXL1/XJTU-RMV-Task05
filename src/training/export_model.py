@@ -1,7 +1,9 @@
 import torch
 from train import TinyLeNet  # 你的模型定义
+# import torch._dynamo as dynamo
 import json
 
+# dynamo.disable()
 # 配置
 IMG_SIZE = (32, 48)
 NUM_CLASSES = 9
@@ -31,8 +33,9 @@ torch.onnx.export(
     input_names=["input"],
     output_names=["output"],
     dynamic_axes={"input": {0: "batch_size"}, "output": {0: "batch_size"}},
-    opset_version=18,  # 改成 18 或 17
+    opset_version=11,  # 改成 18 或 17 会导致 opencv 不兼容
     verbose=False,
+    dynamo=False
 )
 
 

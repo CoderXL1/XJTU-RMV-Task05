@@ -16,7 +16,9 @@
 #include "ament_index_cpp/get_package_share_directory.hpp"
 #include "detect_and_solve/recognition.hpp"
 #include "detect_and_solve/util.hpp"
+#include "detect_and_solve/model_runtime.hpp"
 
+//defined in recognition.hpp, scale down Mat size to optimize efficiency
 extern const float scale;
 
 // #define DEBUG_MODE
@@ -27,26 +29,39 @@ public:
   DetectorAndSolver():Node("detect_and_solve")
   {
     RCLCPP_INFO(this->get_logger(), "Initializing detect_and_solve node...");
-    // params: path for json, size of light strip(mm), use_video option, video path or topic path
+
     std::string package_share_dir = ament_index_cpp::get_package_share_directory("detect_and_solve");
 
-    declare_parameter<std::string>("camera_json", package_share_dir +"/config/camera.json");
-    declare_parameter<std::string>("model_json", package_share_dir +"/config/classes.json");
-    // declare_parameter<double>("width_mm", 140.0);
-    // declare_parameter<double>("height_mm", 55.0); 
-    declare_parameter<bool>("use_video", false);
+    // params: path for config.json, video path or topic path, use_video option
+
+    declare_parameter<std::string>("config_json", package_share_dir +"/config/config.json");
+    declare_parameter<std::string>("model_folder", "/home/leoxia/Code/XJTU-RMV-Task05/src/training");
     declare_parameter<std::string>("path", "/camera/image_raw");
+    declare_parameter<bool>("use_video", false);
+
     
-    camera_json_ = this->get_parameter("camera_json").as_string();
-    model_json_ = this->get_parameter("model_json").as_string();
-    std::cout<<camera_json_<<std::endl;//print!
-    // rect_w_ = this->get_parameter("width_mm").as_double();
-    // rect_h_ = this->get_parameter("height_mm").as_double();
+    config_json_ = this->get_parameter("config_json").as_string();
+    model_folder_ = this->get_parameter("model_folder").as_string();
     use_video=this->get_parameter("use_video").as_bool();
     path_ = this->get_parameter("path").as_string();
-    if (!loadCameraParams(camera_json_)) {
-      RCLCPP_ERROR(this->get_logger(), "Failed to load intrinsics and distortion parameters from: %s", camera_json_.c_str());
+
+    //print!
+    RCLCPP_INFO(this->get_logger(),"config.json path: %s", config_json_.c_str());
+    RCLCPP_INFO(this->get_logger(),"model folder: %s", model_folder_.c_str());
+    if(use_video)
+      RCLCPP_INFO(this->get_logger(),"topic: %s", path_.c_str());
+    else
+      RCLCPP_INFO(this->get_logger(),"video path: %s", path_.c_str());
+
+    if (!loadCameraParams(config_json_))
+    {
+      RCLCPP_ERROR(this->get_logger(), "Failed to load intrinsics and distortion parameters from: %s", config_json_.c_str());
       throw std::runtime_error("config load failure");
+    }
+    if (!md_.LoadModel(model_folder_))
+    {
+      RCLCPP_ERROR(this->get_logger(), "Failed to load model from: %s", model_folder_.c_str());
+      throw std::runtime_error("model load failure");
     }
     //Hard Coding Intrinsic Matrix
     /*
@@ -61,34 +76,43 @@ public:
     // );
     */
     
-    // Subscriber
-    if (use_video) {
+    // Video or Subscriber
+    if (use_video)
+    {
       capture_.open(path_);  // from file
-      if (!capture_.isOpened()) {
+      if (!capture_.isOpened())
+      {
           RCLCPP_ERROR(get_logger(), "Failed to open video file: %s", path_.c_str());
           rclcpp::shutdown();
           return;
       }
-    } else {
+    }
+    else
+    {
         subscription_ = this->create_subscription<sensor_msgs::msg::Image>(
           path_, 10, std::bind(&DetectorAndSolver::imageCallback, this, std::placeholders::_1));
     }
+
+    //Publishers
     detector_pub_ = this->create_publisher<sensor_msgs::msg::Image>("/detector/image_marked", 10);
-    np_pub_ = this->create_publisher<sensor_msgs::msg::Image>("/detector/number_pattern", 10);
-    // Publisher for pose (optional, useful)
     pose_pub_ = this->create_publisher<geometry_msgs::msg::PoseStamped>("/detector/pose", 10);
+    #ifdef DEBUG_MODE
+    np_pub_ = this->create_publisher<sensor_msgs::msg::Image>("/detector/number_pattern", 10);
+    #endif
 
-    RCLCPP_INFO(this->get_logger(), "detect_and_solve node started. camera_json: %s, rect: %.2f x %.2f mm",
-                camera_json_.c_str(), rect_w_, rect_h_);
+    RCLCPP_INFO(this->get_logger(), "detect_and_solve node started. Board size: %.2f x %.2f mm",
+                config_json_.c_str(), board_w_, board_h_);
 
+    // for video input only. as for subscription, spin will handle
     if(use_video)
       videoProcess();
   }
-  private:
+
+private:
   // Parameters
-  std::string camera_json_, model_json_;
-  double rect_w_, rect_h_;
-  std::string path_;
+  std::string config_json_, model_folder_, path_;
+  ModelDriver md_;
+  double board_w_, board_h_;
   bool use_video;
 
   // OpenCV camera params
@@ -100,25 +124,34 @@ public:
 
   // ROS subscription
   rclcpp::Subscription<sensor_msgs::msg::Image>::SharedPtr subscription_;
-  // ROS publisher
-  rclcpp::Publisher<sensor_msgs::msg::Image>::SharedPtr detector_pub_;
-  rclcpp::Publisher<sensor_msgs::msg::Image>::SharedPtr np_pub_;
-  rclcpp::Publisher<geometry_msgs::msg::PoseStamped>::SharedPtr pose_pub_;
 
-  bool loadCameraParams(const std::string &json_path) {
-    if (!std::filesystem::exists(json_path)) {
+  // ROS publishers
+  rclcpp::Publisher<sensor_msgs::msg::Image>::SharedPtr detector_pub_;
+  rclcpp::Publisher<geometry_msgs::msg::PoseStamped>::SharedPtr pose_pub_;// Publisher for pose (optional, useful)
+  #ifdef DEBUG_MODE
+  rclcpp::Publisher<sensor_msgs::msg::Image>::SharedPtr np_pub_;//Publisher for number pattern roi image
+  #endif
+
+  bool loadCameraParams(const std::string &json_path)
+  {
+    //check existence
+    if (!std::filesystem::exists(json_path))
+    {
       RCLCPP_ERROR(this->get_logger(), "camera json does not exist: %s", json_path.c_str());
       return false;
     }
 
+    //try to open
     cv::FileStorage fs(json_path, cv::FileStorage::READ);
-    if (!fs.isOpened()) {
+    if (!fs.isOpened())
+    {
       RCLCPP_ERROR(this->get_logger(), "failed to open json: %s", json_path.c_str());
       return false;
     }
 
-    // camera_matrix is named "camera_matrix"
-    if (fs["camera_matrix"].isNone()) {
+    // dump camera_matrix
+    if (fs["camera_matrix"].isNone())
+    {
       RCLCPP_ERROR(this->get_logger(), "camera_matrix not found in json");
       return false;
     }
@@ -130,20 +163,27 @@ public:
     cameraMatrix_.at<double>(1, 2) *= scale;
 
     // distortion is named "distortion_coefficients"
-    if (!fs["distortion_coefficients"].isNone()) {
+    if (!fs["distortion_coefficients"].isNone())
+    {
       fs["distortion_coefficients"] >> distCoeffs_;
-    } else {
+    }
+    else
+    {
       RCLCPP_WARN(this->get_logger(), "no distortion key found - assume zero");
       distCoeffs_ = cv::Mat::zeros(1, 5, CV_64F);
     }
 
-    if (!fs["board_size"].isNone()&&!fs["board_size"]["width_mm"].isNone()&&!!fs["board_size"]["height_mm"].isNone()) {
-      rect_w_=(double)fs["board_size"]["width_mm"];
-      rect_h_=(double)fs["board_size"]["height_mm"];
-    } else {
-      RCLCPP_WARN(this->get_logger(), "no board size specified in json - using default 60.0 x 100.0");
-      rect_w_=60.0;
-      rect_h_=100.0;
+    if (!fs["board_size"].isNone()&&!fs["board_size"]["width_mm"].isNone()&&!!fs["board_size"]["height_mm"].isNone())
+    {
+      board_w_=(double)fs["board_size"]["width_mm"];
+      board_h_=(double)fs["board_size"]["height_mm"];
+    }
+    else
+    {
+      // the w x h used here refers to the rect spanned by the two light strips, not the entire black board
+      RCLCPP_WARN(this->get_logger(), "no board size specified in json - using default 140.0 x 60.0");
+      board_w_=140.0;
+      board_h_=60.0;
     }
 
     // Optional: compute optimal new camera matrix for undistort
@@ -157,14 +197,12 @@ public:
     return true;
   }
 
-  bool solve_pnp(cv::RotatedRect& rect)//, cv::Mat undistorted)
+  bool solve_pnp(cv::RotatedRect& rect)
   {
-    const double&w = rect_w_;
-    const double&h = rect_h_;
+    const double&w = board_w_;
+    const double&h = board_h_;
     std::vector<cv::Point2f> rect_corners(4);
     rect.points(rect_corners.data());
-    // for(auto i:rect_corners)
-    //   std::cout<<i.x<<" "<<i.y<<std::endl;
 
     // Define rectangle in its local object frame, e.g. z=0 plane:
     // top-left, top-right, bottom-right, bottom-left
@@ -178,7 +216,8 @@ public:
     // Solve PnP
     cv::Mat rvec, tvec;
     bool success = cv::solvePnP(obj_pts, rect_corners, newCameraMatrix_, cv::Mat(), rvec, tvec, false, cv::SOLVEPNP_ITERATIVE);
-    if (!success) {
+    if (!success)
+    {
       RCLCPP_ERROR(this->get_logger(), "solvePnP failed");
       return false;
     }
@@ -189,17 +228,10 @@ public:
       tvec.at<double>(0), tvec.at<double>(1), tvec.at<double>(2),
       rvec.at<double>(0), rvec.at<double>(1), rvec.at<double>(2));
 
-    // Log rotation matrix
-    /*
-    RCLCPP_DEBUG(this->get_logger(), "Rotation matrix:\n[%f %f %f; %f %f %f; %f %f %f]",
-      R.at<double>(0,0), R.at<double>(0,1), R.at<double>(0,2),
-      R.at<double>(1,0), R.at<double>(1,1), R.at<double>(1,2),
-      R.at<double>(2,0), R.at<double>(2,1), R.at<double>(2,2));*/
-
-    // Publish PoseStamped (convert mm -> meters)
+    // Publish PoseStamped
     geometry_msgs::msg::PoseStamped pose_msg;
     pose_msg.header.stamp = this->now();
-    pose_msg.header.frame_id = "camera_link"; // set appropriately for your TF tree
+    pose_msg.header.frame_id = "camera_link";
 
     // translation: convert to meters
     pose_msg.pose.position.x = tvec.at<double>(0) / 1000.0;
@@ -224,73 +256,52 @@ public:
     pose_msg.pose.orientation.w = q.w();
 
     pose_pub_->publish(pose_msg);
-    /*
-    // Optionally draw result and show (if running with GUI)
-    // draw corners and axis for visualization
-    // std::vector<cv::Point2f> axis2d;
-    // // Project 3D axis points to image for visualization (optional)
-    // std::vector<cv::Point3f> axis3d = {
-    //   cv::Point3f(0,0,0),
-    //   cv::Point3f((float)rect_w_, 0, 0),
-    //   cv::Point3f(0, (float)rect_h_, 0),
-    //   cv::Point3f(0,0,-(float)rect_w_) // some depth vector
-    // };
-    // cv::projectPoints(axis3d, rvec, tvec, newCameraMatrix_, cv::Mat(), axis2d);
-
-    // for (size_t i=0;i<axis2d.size();++i) {
-    //   cv::circle(undistorted, axis2d[i], 3, cv::Scalar(0,255,0), -1);
-    // }
-    // for (auto &p: rect_corners) {
-    //   cv::circle(undistorted, p, 4, cv::Scalar(0,0,255), -1);
-    // }
-    // show in window (only if you have DISPLAY)
-    // debug_frame(undistorted);
-    */
   }
 
   void processFrame(cv::Mat originalframe)
   {
     // frame should already be BGR
+
     // Undistort input frame (optional but recommended)
     cv::Mat undistorted, undistorted_hsv, frame, gray, normImg;
+
     // Scale down to optimize efficiency
     cv::resize(originalframe, frame, cv::Size(), scale, scale, cv::INTER_LINEAR);
-    if (!newCameraMatrix_.empty()) {
+
+    if (!newCameraMatrix_.empty())
+    {
       // if newCameraMatrix_ already computed, use it
       cv::undistort(frame, undistorted, cameraMatrix_, distCoeffs_, newCameraMatrix_);
-    } else {
+    }
+    else
+    {
       // compute newCameraMatrix for this image size on first call
       newCameraMatrix_ = cv::getOptimalNewCameraMatrix(cameraMatrix_, distCoeffs_, frame.size(), 0);
       cv::undistort(frame, undistorted, cameraMatrix_, distCoeffs_, newCameraMatrix_);
     }
 
-/*    cv::cvtColor(undistorted, gray, cv::COLOR_BGR2GRAY);
-
-    // 局部对比度增强（光照均衡）
-    cv::Ptr<cv::CLAHE> clahe = cv::createCLAHE(3.0, cv::Size(8,8));
-    clahe->apply(gray, normImg);
-
-    // cv::imshow("undistorted",undistorted);
-    // Call your recognition routine to extract rectangle corners
+    // call the 2 rec functions with hsv images
     cv::cvtColor(undistorted, undistorted_hsv, cv::COLOR_BGR2HSV);
-    cv::Mat channels[3];
-    cv::split(undistorted_hsv, channels);
-    cv::addWeighted(channels[2], 0.5, normImg, 0.5, 0, channels[2]);
-    cv::merge(channels, undistorted_hsv);*/
-    cv::cvtColor(undistorted, undistorted_hsv, cv::COLOR_BGR2HSV);
+
+    // prepare for the ret value: an array of potential light strips
+    // and an array of potential number patterns
     std::vector<cv::RotatedRect> light_strips, number_patterns;
+
     bool found;
     found = recognition_main(undistorted_hsv, light_strips);
     if (!found) {
       RCLCPP_WARN_THROTTLE(this->get_logger(), *this->get_clock(), 2000, "recognition_main did not find target in this frame");
       return;
     }
+
     found = recognition_number(undistorted_hsv, number_patterns);
     if (!found) {
       RCLCPP_WARN_THROTTLE(this->get_logger(), *this->get_clock(), 2000, "recognition_number did not find target in this frame");
       return;
     }
-#ifdef DEBUG_MODE
+
+// display all candid strips and number patterns for debug
+    #ifdef DEBUG_MODE
     cv::Mat plot1=undistorted.clone();
     for(auto rect:light_strips)
     {
@@ -302,49 +313,51 @@ public:
     }
     cv::imshow("plot", plot1);
     cv::waitKey(0);
-#endif
-    cv::RotatedRect *pattern1,*strip1, *strip2;
-    pattern1=nullptr;
-    // std::cout<<number_patterns.size()<<std::endl;
-#ifdef DEBUG_MODE
+    #endif
+
+// pointers for best match
+    cv::RotatedRect *pattern,*strip1, *strip2;
+    pattern=nullptr;
+
+// local plot Mat variable for debug
+    #ifdef DEBUG_MODE
     cv::Mat currplot;
-#endif
-    for(auto &pattern: number_patterns)
+    #endif
+    for(auto &ptn: number_patterns)
     {
-      // Find out the 2 nearest but not overlapping strips around this pattern
-#ifdef DEBUG_MODE
+      #ifdef DEBUG_MODE
       currplot = undistorted.clone();
-      plot_rect_red(currplot, pattern);
+      plot_rect_red(currplot, ptn);
       cv::imshow("plot", currplot);
       cv::waitKey(0);
-#endif
+      #endif
+      // Find out the 2 nearest but not overlapping strips around this pattern
       double dist1,dist2;
       strip1=strip2=nullptr;
       dist1=dist2=100000000.0;
       for(auto &strip: light_strips)
       {
         //if not optimal, pass
-        // std::cout<<strip.center.x<<" "<<strip.center.y<<std::endl;
-        if(cv::norm(pattern.center-strip.center)>=dist2)
+        if(cv::norm(ptn.center-strip.center)>=dist2)
         {
-#ifdef DEBUG_MODE
+          #ifdef DEBUG_MODE
           std::cout<<"pass at 292"<<std::endl;
-#endif
+          #endif
           continue;
         }
         //if not right ratio, pass
         if(strip.size.aspectRatio()<3&&strip.size.aspectRatio()>0.33)
         {
-#ifdef DEBUG_MODE
+          #ifdef DEBUG_MODE
           std::cout<<"pass at 294"<<std::endl;
-#endif
+          #endif
           continue;
         }
         // convert to local frame
-        cv::Point2f local = strip.center - pattern.center;
+        cv::Point2f local = strip.center - ptn.center;
 
         // calc angle and rotation stuff
-        float theta = (float)(-pattern.angle * CV_PI / 180.0);  // inverse rotation
+        float theta = (float)(-ptn.angle * CV_PI / 180.0);  // inverse rotation
         float cosA = std::cos(theta);
         float sinA = std::sin(theta);
 
@@ -353,16 +366,16 @@ public:
         float yRot = local.x * sinA + local.y * cosA;
 
         // Check if it's inside the boundary
-        float hw = pattern.size.width  * 0.5f;
-        float hh = pattern.size.height * 0.5f;
+        float hw = ptn.size.width  * 0.5f;
+        float hh = ptn.size.height * 0.5f;
         if(std::abs(xRot) <= hw && std::abs(yRot) <= hh)
         {
-#ifdef DEBUG_MODE
+          #ifdef DEBUG_MODE
           std::cout<<"pass at 313"<<std::endl;
-#endif
+          #endif
           continue;
         }
-        dist2 = cv::norm(pattern.center-strip.center);
+        dist2 = cv::norm(ptn.center-strip.center);
         strip2=&strip;
         if(dist2<dist1)
         {
@@ -370,39 +383,39 @@ public:
           strip2=strip1;
           strip1=&strip;
         }
-#ifdef DEBUG_MODE
+        #ifdef DEBUG_MODE
         cv::Mat currplot2=currplot.clone();
         plot_rect_green(currplot2, strip);
         cv::imshow("plot",currplot2);
         cv::waitKey(0);
-#endif
+        #endif
       }
       if(!strip1||!strip2)
       {
-#ifdef DEBUG_MODE
+        #ifdef DEBUG_MODE
         std::cout<<"pass at 323"<<std::endl;
-#endif
+        #endif
         continue;
       }
-#ifdef DEBUG_MODE
+      #ifdef DEBUG_MODE
       plot_rect_green(currplot, *strip1);
       plot_rect_green(currplot, *strip2);
       std::cout<<"result:\n";
-      std::cout<<pattern.center.x<<" "<<pattern.center.y<<std::endl;
+      std::cout<<ptn.center.x<<" "<<ptn.center.y<<std::endl;
       std::cout<<strip1->center.x<<" "<<strip1->center.y<<std::endl;
       std::cout<<strip2->center.x<<" "<<strip2->center.y<<std::endl;
-#endif
+      #endif
 
       //Check if this potential number pattern lies in the very middle of the 2 strips
-#define MAX_ERR 50*scale
-      if(cv::norm(pattern.center-(strip1->center+strip2->center)*0.5)>MAX_ERR)
+      #define MAX_ERR 50*scale
+      if(cv::norm(ptn.center-(strip1->center+strip2->center)*0.5)>MAX_ERR)
       {
-#ifdef DEBUG_MODE
+        #ifdef DEBUG_MODE
         std::cout<<"pass at 326"<<std::endl;
-#endif
+        #endif
         continue;
       }
-#undef MAX_ERR
+      #undef MAX_ERR
       //Check if these 2 nearest strips are parallel with each other.
       cv::Point2f vtx1[4],vtx2[4];
       strip1->points(vtx1);
@@ -417,62 +430,64 @@ public:
         h2=normalize(vtx2[1]-vtx2[2]);
       else
         h2=normalize(vtx2[0]-vtx2[1]);
-#define MAX_ERR 0.26  //about sin(15 deg)
+
+      #define MAX_ERR 0.26  //about sin(15 deg)
       if(abs(h1.cross(h2))>MAX_ERR)
       {
-#ifdef DEBUG_MODE
+        #ifdef DEBUG_MODE
         std::cout<<"pass at 343"<<std::endl;
-#endif
+        #endif
         continue;
       }
-#undef MAX_ERR
-      pattern1=&pattern;
+      #undef MAX_ERR
+      pattern=&ptn;
       break;
     }
 
-    if(!pattern1||!strip1||!strip2)    //Recognition Failed
+    if(!pattern||!strip1||!strip2)    //Recognition Failed
       return;
 
-#ifdef DEBUG_MODE
+    #ifdef DEBUG_MODE
     std::cout<<"success!"<<std::endl;
-#endif
+    #endif
 
-    //publish number pattern image
-    cv::Rect roi_box = pattern1->boundingRect();
+    //crop to roi for model
+    cv::Rect roi_box = pattern->boundingRect();
     roi_box &= cv::Rect(0, 0, undistorted.cols, undistorted.rows); // prevent overflow
-    cv::Mat roi = undistorted(roi_box).clone(), resized;
-    //!important, aspect ratio 2x3
-    cv::resize(roi, resized, cv::Size(32, 48));
+    cv::Mat roi = undistorted(roi_box);
+
+    //publish number pattern image for debug
+    #ifdef DEBUG_MODE
     std_msgs::msg::Header np_header;//np for number_pattern
     np_header.stamp = this->now();
     np_header.frame_id = "camera_link";
     auto img_msg1 = cv_bridge::CvImage(np_header, "bgr8", resized).toImageMsg();
     np_pub_->publish(*img_msg1);
+    #endif DEBUG_MODE
 
+    //run classification model on number pattern image
+    std::string cls;
+    double prob;
+    md_.classify(roi, cls, prob);
+    RCLCPP_INFO(this->get_logger(), "Recognized Number: %s; prob: %.4lf",cls.c_str(), prob);
+
+    //plot frame
     cv::RotatedRect strip_ref1,strip_ref2;// ref for refined
     refineStrip(undistorted_hsv, *strip1, strip_ref1);
     refineStrip(undistorted_hsv, *strip2, strip_ref2);
     plot_rect_green(undistorted, strip_ref1);
     plot_rect_green(undistorted, strip_ref2);
-#ifdef DEBUG_MODE
+    #ifdef DEBUG_MODE
     // debug_frame(undistorted, false);
-#endif
-    plot_rect_red(undistorted, *pattern1);
+    #endif
+    plot_rect_red(undistorted, *pattern);
     
-#ifdef DEBUG_MODE
-    cv::imshow("plot",undistorted);
-    cv::waitKey(0);
-#endif
-    //publish marked image
-    std_msgs::msg::Header mk_header;//mk for marked
-    mk_header.stamp = this->now();
-    mk_header.frame_id = "camera_link";
-    auto img_msg2 = cv_bridge::CvImage(mk_header, "bgr8", undistorted).toImageMsg();
-    detector_pub_->publish(*img_msg2);
-
-    //solve pnp
+    #ifdef DEBUG_MODE
+    debug_frame(undistorted);
+    #endif
+    
     cv::Point2f strip_pts1[4], strip_pts2[4];
-    std::vector<cv::Point2f> strip_pts(8);
+    std::vector<cv::Point2f> strip_pts;
     strip_ref1.points(strip_pts1);
     strip_ref2.points(strip_pts2);
     for(int i=0;i<4;i++)
@@ -481,6 +496,19 @@ public:
       strip_pts.push_back(strip_pts2[i]);
     }
     cv::RotatedRect board_rect = cv::minAreaRect(strip_pts);
+    plot_rect_red(undistorted, board_rect);
+    #ifdef DEBUG_MODE
+    debug_frame(undistorted, false);
+    #endif
+
+    //publish marked image
+    std_msgs::msg::Header mk_header;//mk for marked
+    mk_header.stamp = this->now();
+    mk_header.frame_id = "camera_link";
+    auto img_msg2 = cv_bridge::CvImage(mk_header, "bgr8", undistorted).toImageMsg();
+    detector_pub_->publish(*img_msg2);
+
+    //solve pnp
     solve_pnp(board_rect);
   }
 

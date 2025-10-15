@@ -6,6 +6,7 @@
 
 #include <algorithm>
 #include "detect_and_solve/recognition.hpp"
+#include "detect_and_solve/util.hpp"
 using namespace cv;
 using namespace std;
 
@@ -37,16 +38,6 @@ bool angular_vaidation(RotatedRect&rect)
         return 5<height/width;//&&height/width<7;
 }
 
-void debug_frame(Mat Img, bool cvt_to_bgr)
-{
-    double wscale = 0.5; // 缩小到 50%
-    cv::Mat small;
-    cv::resize(Img, small, cv::Size(), wscale, wscale);
-    if(cvt_to_bgr&&small.channels()!=1)
-        cv::cvtColor(small,small,COLOR_HSV2BGR);
-    cv::imshow("Img", small);
-    cv::waitKey(0);
-}
 bool cmp(const RotatedRect&a, const RotatedRect&b)
 {
     return a.center.x<b.center.x;
@@ -211,8 +202,14 @@ bool refineStrip(const cv::Mat&hsvImg, cv::RotatedRect rect, cv::RotatedRect&out
     }
     // 拟合直线
     if(all_points.empty())return false;
-    out=cv::minAreaRect(all_points);
-    out.center.x += roi_box.x;
-    out.center.y += roi_box.y;
+    cv::RotatedRect primitive_out=cv::minAreaRect(all_points);
+    std::vector<cv::Point2f> primitive_pts(4);
+    primitive_out.points(primitive_pts.data());
+    for(auto&pt:primitive_pts)
+    {
+        pt.x+=roi_box.x;
+        pt.y+=roi_box.y;
+    }
+    out=cv::minAreaRect(primitive_pts);
     return true;
 }
