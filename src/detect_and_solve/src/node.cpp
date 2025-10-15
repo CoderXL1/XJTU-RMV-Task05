@@ -21,8 +21,6 @@ extern const float scale;
 
 // #define DEBUG_MODE
 
-namespace fs=std::filesystem;
-
 class DetectorAndSolver : public rclcpp::Node
 {
 public:
@@ -32,13 +30,15 @@ public:
     // params: path for json, size of light strip(mm), use_video option, video path or topic path
     std::string package_share_dir = ament_index_cpp::get_package_share_directory("detect_and_solve");
 
-    this->declare_parameter<std::string>("camera_json", package_share_dir +"/config/camera.json");
-    // this->declare_parameter<double>("width_mm", 140.0);
-    // this->declare_parameter<double>("height_mm", 55.0); 
+    declare_parameter<std::string>("camera_json", package_share_dir +"/config/camera.json");
+    declare_parameter<std::string>("model_json", package_share_dir +"/config/classes.json");
+    // declare_parameter<double>("width_mm", 140.0);
+    // declare_parameter<double>("height_mm", 55.0); 
     declare_parameter<bool>("use_video", false);
     declare_parameter<std::string>("path", "/camera/image_raw");
     
     camera_json_ = this->get_parameter("camera_json").as_string();
+    model_json_ = this->get_parameter("model_json").as_string();
     std::cout<<camera_json_<<std::endl;//print!
     // rect_w_ = this->get_parameter("width_mm").as_double();
     // rect_h_ = this->get_parameter("height_mm").as_double();
@@ -86,7 +86,7 @@ public:
   }
   private:
   // Parameters
-  std::string camera_json_;
+  std::string camera_json_, model_json_;
   double rect_w_, rect_h_;
   std::string path_;
   bool use_video;
@@ -102,11 +102,11 @@ public:
   rclcpp::Subscription<sensor_msgs::msg::Image>::SharedPtr subscription_;
   // ROS publisher
   rclcpp::Publisher<sensor_msgs::msg::Image>::SharedPtr detector_pub_;
-    rclcpp::Publisher<sensor_msgs::msg::Image>::SharedPtr np_pub_;
+  rclcpp::Publisher<sensor_msgs::msg::Image>::SharedPtr np_pub_;
   rclcpp::Publisher<geometry_msgs::msg::PoseStamped>::SharedPtr pose_pub_;
 
   bool loadCameraParams(const std::string &json_path) {
-    if (!fs::exists(json_path)) {
+    if (!std::filesystem::exists(json_path)) {
       RCLCPP_ERROR(this->get_logger(), "camera json does not exist: %s", json_path.c_str());
       return false;
     }
@@ -440,11 +440,13 @@ public:
     //publish number pattern image
     cv::Rect roi_box = pattern1->boundingRect();
     roi_box &= cv::Rect(0, 0, undistorted.cols, undistorted.rows); // prevent overflow
-    cv::Mat roi = undistorted(roi_box).clone();
+    cv::Mat roi = undistorted(roi_box).clone(), resized;
+    //!important, aspect ratio 2x3
+    cv::resize(roi, resized, cv::Size(32, 48));
     std_msgs::msg::Header np_header;//np for number_pattern
     np_header.stamp = this->now();
     np_header.frame_id = "camera_link";
-    auto img_msg1 = cv_bridge::CvImage(np_header, "bgr8", roi).toImageMsg();
+    auto img_msg1 = cv_bridge::CvImage(np_header, "bgr8", resized).toImageMsg();
     np_pub_->publish(*img_msg1);
 
     cv::RotatedRect strip_ref1,strip_ref2;// ref for refined

@@ -12,7 +12,7 @@ public:
   HikCameraNode()
   : Node("hik_camera_node"), driver_(std::make_shared<HikCameraDriver>())
   {
-    RCLCPP_INFO(this->get_logger(), "Initializing HikRobot camera node...");
+    RCLCPP_INFO(this->get_logger(), "Initializing HikRobot camera node...\nMAKE SURE TO ADJUST THE APERTURE!");
 
     // 打开相机
     if (!driver_->openCamera()) {

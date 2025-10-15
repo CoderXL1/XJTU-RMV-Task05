@@ -1,17 +1,23 @@
 # CMake / 构建
 build/
+install/
+log/
 out/
 cmake-build-*/
-*/build/
-*/out/
-*/cmake-build-*/
+/**/build/
+/**/install/
+/**/log/
+/**/__pycache__/
+/**/dataset/
+/**/dataset_split/
+/**/out/
+/**/cmake-build-*/
 CMakeCache.txt
 CMakeFiles/
 Makefile
 cmake_install.cmake
 compile_commands.json
 *.cbp
-*.workspace
 
 # IDE
 .vscode/
