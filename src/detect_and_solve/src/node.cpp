@@ -74,6 +74,7 @@ public:
           path_, 10, std::bind(&DetectorAndSolver::imageCallback, this, std::placeholders::_1));
     }
     detector_pub_ = this->create_publisher<sensor_msgs::msg::Image>("/detector/image_marked", 10);
+    np_pub_ = this->create_publisher<sensor_msgs::msg::Image>("/detector/number_pattern", 10);
     // Publisher for pose (optional, useful)
     pose_pub_ = this->create_publisher<geometry_msgs::msg::PoseStamped>("/detector/pose", 10);
 
@@ -101,6 +102,7 @@ public:
   rclcpp::Subscription<sensor_msgs::msg::Image>::SharedPtr subscription_;
   // ROS publisher
   rclcpp::Publisher<sensor_msgs::msg::Image>::SharedPtr detector_pub_;
+    rclcpp::Publisher<sensor_msgs::msg::Image>::SharedPtr np_pub_;
   rclcpp::Publisher<geometry_msgs::msg::PoseStamped>::SharedPtr pose_pub_;
 
   bool loadCameraParams(const std::string &json_path) {
@@ -435,7 +437,17 @@ public:
     std::cout<<"success!"<<std::endl;
 #endif
 
-    cv::RotatedRect strip_ref1,strip_ref2;
+    //publish number pattern image
+    cv::Rect roi_box = pattern1->boundingRect();
+    roi_box &= cv::Rect(0, 0, undistorted.cols, undistorted.rows); // prevent overflow
+    cv::Mat roi = undistorted(roi_box).clone();
+    std_msgs::msg::Header np_header;//np for number_pattern
+    np_header.stamp = this->now();
+    np_header.frame_id = "camera_link";
+    auto img_msg1 = cv_bridge::CvImage(np_header, "bgr8", roi).toImageMsg();
+    np_pub_->publish(*img_msg1);
+
+    cv::RotatedRect strip_ref1,strip_ref2;// ref for refined
     refineStrip(undistorted_hsv, *strip1, strip_ref1);
     refineStrip(undistorted_hsv, *strip2, strip_ref2);
     plot_rect_green(undistorted, strip_ref1);
@@ -444,19 +456,30 @@ public:
     // debug_frame(undistorted, false);
 #endif
     plot_rect_red(undistorted, *pattern1);
-    // plot_rect_green(undistorted, *strip1);
-    // plot_rect_green(undistorted, *strip2);
     
 #ifdef DEBUG_MODE
     cv::imshow("plot",undistorted);
     cv::waitKey(0);
 #endif
-    std_msgs::msg::Header header;
-    header.stamp = this->now();
-    header.frame_id = "camera_link";
-    auto img_msg = cv_bridge::CvImage(header, "bgr8", undistorted).toImageMsg();
-    detector_pub_->publish(*img_msg);
-    solve_pnp(*pattern1);
+    //publish marked image
+    std_msgs::msg::Header mk_header;//mk for marked
+    mk_header.stamp = this->now();
+    mk_header.frame_id = "camera_link";
+    auto img_msg2 = cv_bridge::CvImage(mk_header, "bgr8", undistorted).toImageMsg();
+    detector_pub_->publish(*img_msg2);
+
+    //solve pnp
+    cv::Point2f strip_pts1[4], strip_pts2[4];
+    std::vector<cv::Point2f> strip_pts(8);
+    strip_ref1.points(strip_pts1);
+    strip_ref2.points(strip_pts2);
+    for(int i=0;i<4;i++)
+    {
+      strip_pts.push_back(strip_pts1[i]);
+      strip_pts.push_back(strip_pts2[i]);
+    }
+    cv::RotatedRect board_rect = cv::minAreaRect(strip_pts);
+    solve_pnp(board_rect);
   }
 
   void imageCallback(const sensor_msgs::msg::Image::SharedPtr msg) {
