@@ -1,4 +1,4 @@
-#include "hik_camera_driver.hpp"
+#include "hik_camera/hik_camera_driver.hpp"
 #include <iostream>
 #include <cstring>             // memset
 #include <opencv2/opencv.hpp>

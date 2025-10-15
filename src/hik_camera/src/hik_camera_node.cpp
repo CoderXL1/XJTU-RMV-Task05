@@ -4,7 +4,7 @@
 #include "std_msgs/msg/string.hpp"
 #include "std_msgs/msg/float32.hpp"
 #include "cv_bridge/cv_bridge.h"
-#include "hik_camera_driver.hpp"  // 你自己的驱动头文件
+#include "hik_camera/hik_camera_driver.hpp"  // 你自己的驱动头文件
 
 class HikCameraNode : public rclcpp::Node
 {
