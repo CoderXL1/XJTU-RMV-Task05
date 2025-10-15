@@ -17,6 +17,8 @@
 #include "detect_and_solve/recognition.hpp"
 #include "detect_and_solve/util.hpp"
 
+extern const float scale;
+
 // #define DEBUG_MODE
 
 namespace fs=std::filesystem;
@@ -119,6 +121,11 @@ public:
       return false;
     }
     fs["camera_matrix"] >> cameraMatrix_;
+
+    cameraMatrix_.at<double>(0, 0) *= scale;
+    cameraMatrix_.at<double>(1, 1) *= scale;
+    cameraMatrix_.at<double>(0, 2) *= scale;
+    cameraMatrix_.at<double>(1, 2) *= scale;
 
     // distortion is named "distortion_coefficients"
     if (!fs["distortion_coefficients"].isNone()) {
@@ -239,11 +246,13 @@ public:
     */
   }
 
-  void processFrame(cv::Mat frame)
+  void processFrame(cv::Mat originalframe)
   {
     // frame should already be BGR
     // Undistort input frame (optional but recommended)
-    cv::Mat undistorted;
+    cv::Mat undistorted, undistorted_hsv, frame, gray, normImg;
+    // Scale down to optimize efficiency
+    cv::resize(originalframe, frame, cv::Size(), scale, scale, cv::INTER_LINEAR);
     if (!newCameraMatrix_.empty()) {
       // if newCameraMatrix_ already computed, use it
       cv::undistort(frame, undistorted, cameraMatrix_, distCoeffs_, newCameraMatrix_);
@@ -253,15 +262,28 @@ public:
       cv::undistort(frame, undistorted, cameraMatrix_, distCoeffs_, newCameraMatrix_);
     }
 
+/*    cv::cvtColor(undistorted, gray, cv::COLOR_BGR2GRAY);
+
+    // 局部对比度增强（光照均衡）
+    cv::Ptr<cv::CLAHE> clahe = cv::createCLAHE(3.0, cv::Size(8,8));
+    clahe->apply(gray, normImg);
+
+    // cv::imshow("undistorted",undistorted);
     // Call your recognition routine to extract rectangle corners
+    cv::cvtColor(undistorted, undistorted_hsv, cv::COLOR_BGR2HSV);
+    cv::Mat channels[3];
+    cv::split(undistorted_hsv, channels);
+    cv::addWeighted(channels[2], 0.5, normImg, 0.5, 0, channels[2]);
+    cv::merge(channels, undistorted_hsv);*/
+    cv::cvtColor(undistorted, undistorted_hsv, cv::COLOR_BGR2HSV);
     std::vector<cv::RotatedRect> light_strips, number_patterns;
     bool found;
-    found = recognition_main(undistorted, light_strips);
+    found = recognition_main(undistorted_hsv, light_strips);
     if (!found) {
       RCLCPP_WARN_THROTTLE(this->get_logger(), *this->get_clock(), 2000, "recognition_main did not find target in this frame");
       return;
     }
-    found = recognition_number(undistorted, number_patterns);
+    found = recognition_number(undistorted_hsv, number_patterns);
     if (!found) {
       RCLCPP_WARN_THROTTLE(this->get_logger(), *this->get_clock(), 2000, "recognition_number did not find target in this frame");
       return;
@@ -370,7 +392,7 @@ public:
 #endif
 
       //Check if this potential number pattern lies in the very middle of the 2 strips
-#define MAX_ERR 50
+#define MAX_ERR 50*scale
       if(cv::norm(pattern.center-(strip1->center+strip2->center)*0.5)>MAX_ERR)
       {
 #ifdef DEBUG_MODE
@@ -413,19 +435,26 @@ public:
     std::cout<<"success!"<<std::endl;
 #endif
 
-    cv::Mat res=undistorted.clone();
-    plot_rect_red(res, *pattern1);
-    plot_rect_green(res, *strip1);
-    plot_rect_green(res, *strip2);
+    cv::RotatedRect strip_ref1,strip_ref2;
+    refineStrip(undistorted_hsv, *strip1, strip_ref1);
+    refineStrip(undistorted_hsv, *strip2, strip_ref2);
+    plot_rect_green(undistorted, strip_ref1);
+    plot_rect_green(undistorted, strip_ref2);
+#ifdef DEBUG_MODE
+    // debug_frame(undistorted, false);
+#endif
+    plot_rect_red(undistorted, *pattern1);
+    // plot_rect_green(undistorted, *strip1);
+    // plot_rect_green(undistorted, *strip2);
     
 #ifdef DEBUG_MODE
-    cv::imshow("plot",res);
+    cv::imshow("plot",undistorted);
     cv::waitKey(0);
 #endif
     std_msgs::msg::Header header;
     header.stamp = this->now();
     header.frame_id = "camera_link";
-    auto img_msg = cv_bridge::CvImage(header, "bgr8", res).toImageMsg();
+    auto img_msg = cv_bridge::CvImage(header, "bgr8", undistorted).toImageMsg();
     detector_pub_->publish(*img_msg);
     solve_pnp(*pattern1);
   }

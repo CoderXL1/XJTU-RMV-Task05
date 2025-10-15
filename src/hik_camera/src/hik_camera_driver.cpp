@@ -119,8 +119,9 @@ bool HikCameraDriver::setGain(int value) {
 
 bool HikCameraDriver::setFPS(float fps) {
     if (!handle_) return false;
-    int nRet = MV_CC_SetFloatValue(handle_, "AcquisitionFrameRate", fps);
-    return Check(nRet);
+    int nRet1 = MV_CC_SetBoolValue(handle_, "AcquisitionFrameRateEnable", true);
+    int nRet2 = MV_CC_SetFloatValue(handle_, "AcquisitionFrameRate", fps);
+    return Check(nRet1)&&Check(nRet2);
 }
 
 bool HikCameraDriver::setPixelFormat(std::string pixelFormat) {

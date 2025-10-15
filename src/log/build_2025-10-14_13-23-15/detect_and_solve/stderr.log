@@ -1,0 +1,15 @@
+[01m[K/home/leoxia/Code/XJTU-RMV-Task05/src/detect_and_solve/src/recognition.cpp:[m[K In function ‘[01m[Kbool recognition_main(const cv::Mat&, std::vector<cv::RotatedRect>&)[m[K’:
+[01m[K/home/leoxia/Code/XJTU-RMV-Task05/src/detect_and_solve/src/recognition.cpp:54:33:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[KoriginalImg[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+   54 | bool recognition_main([01;35m[Kconst Mat&originalImg[m[K, vector<RotatedRect>& out)
+      |                       [01;35m[K~~~~~~~~~~^~~~~~~~~~~[m[K
+[01m[K/home/leoxia/Code/XJTU-RMV-Task05/src/detect_and_solve/src/recognition.cpp:[m[K In function ‘[01m[Kbool recognition_number(const cv::Mat&, std::vector<cv::RotatedRect>&)[m[K’:
+[01m[K/home/leoxia/Code/XJTU-RMV-Task05/src/detect_and_solve/src/recognition.cpp:127:39:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[KoriginalImg[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  127 | bool recognition_number([01;35m[Kconst cv::Mat&originalImg[m[K, std::vector<cv::RotatedRect>& out)
+      |                         [01;35m[K~~~~~~~~~~~~~~^~~~~~~~~~~[m[K
+[01m[K/home/leoxia/Code/XJTU-RMV-Task05/src/detect_and_solve/src/recognition.cpp:[m[K In function ‘[01m[Kbool refineStrip(const cv::Mat&, cv::RotatedRect, std::vector<cv::Point_<float> >&)[m[K’:
+[01m[K/home/leoxia/Code/XJTU-RMV-Task05/src/detect_and_solve/src/recognition.cpp:174:1:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreturn-type-Wreturn-type]8;;[m[K]
+  174 | [01;35m[K}[m[K
+      | [01;35m[K^[m[K
+[01m[K/home/leoxia/Code/XJTU-RMV-Task05/src/detect_and_solve/src/recognition.cpp:163:93:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kout[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  163 | bool refineStrip(const cv::Mat&originalImg, cv::RotatedRect rect, [01;35m[Kstd::vector<cv::Point2f>& out[m[K)
+      |                                                                   [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K

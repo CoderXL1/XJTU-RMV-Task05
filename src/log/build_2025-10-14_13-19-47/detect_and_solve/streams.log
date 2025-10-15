@@ -1,0 +1,42 @@
+[0.029s] Invoking command in '/home/leoxia/Code/XJTU-RMV-Task05/src/build/detect_and_solve': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/leoxia/Code/XJTU-RMV-Task05/src/build/detect_and_solve -- -j4 -l4
+[0.172s] [35m[1mConsolidate compiler generated dependencies of target detect_and_solve[0m
+[0.210s] [ 25%] [32mBuilding CXX object CMakeFiles/detect_and_solve.dir/src/recognition.cpp.o[0m
+[2.571s] [01m[K/home/leoxia/Code/XJTU-RMV-Task05/src/detect_and_solve/src/recognition.cpp:[m[K In function ‘[01m[Kbool recognition_main(const cv::Mat&, std::vector<cv::RotatedRect>&)[m[K’:
+[2.571s] [01m[K/home/leoxia/Code/XJTU-RMV-Task05/src/detect_and_solve/src/recognition.cpp:54:33:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[KoriginalImg[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.572s]    54 | bool recognition_main([01;35m[Kconst Mat&originalImg[m[K, vector<RotatedRect>& out)
+[2.572s]       |                       [01;35m[K~~~~~~~~~~^~~~~~~~~~~[m[K
+[2.575s] [01m[K/home/leoxia/Code/XJTU-RMV-Task05/src/detect_and_solve/src/recognition.cpp:[m[K In function ‘[01m[Kbool refineStrip(const cv::Mat&, cv::RotatedRect, std::vector<cv::Point_<float> >&)[m[K’:
+[2.575s] [01m[K/home/leoxia/Code/XJTU-RMV-Task05/src/detect_and_solve/src/recognition.cpp:174:1:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreturn-type-Wreturn-type]8;;[m[K]
+[2.575s]   174 | [01;35m[K}[m[K
+[2.576s]       | [01;35m[K^[m[K
+[2.576s] [01m[K/home/leoxia/Code/XJTU-RMV-Task05/src/detect_and_solve/src/recognition.cpp:163:93:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kout[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.576s]   163 | bool refineStrip(const cv::Mat&originalImg, cv::RotatedRect rect, [01;35m[Kstd::vector<cv::Point2f>& out[m[K)
+[2.576s]       |                                                                   [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+[3.680s] [ 50%] [32m[1mLinking CXX executable detect_and_solve[0m
+[6.135s] [100%] Built target detect_and_solve
+[6.157s] Invoked command in '/home/leoxia/Code/XJTU-RMV-Task05/src/build/detect_and_solve' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/leoxia/Code/XJTU-RMV-Task05/src/build/detect_and_solve -- -j4 -l4
+[6.161s] Invoking command in '/home/leoxia/Code/XJTU-RMV-Task05/src/build/detect_and_solve': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/leoxia/Code/XJTU-RMV-Task05/src/build/detect_and_solve
+[6.178s] -- Install configuration: ""
+[6.180s] -- Execute custom install script
+[6.182s] -- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/lib/detect_and_solve/detect_and_solve
+[6.182s] -- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/include/detect_and_solve/recognition.hpp
+[6.182s] -- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/include/detect_and_solve/util.hpp
+[6.183s] -- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/share/detect_and_solve/launch/launch.py
+[6.185s] -- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/share/detect_and_solve/config/camera.json
+[6.185s] -- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/share/detect_and_solve/config/camera.yaml
+[6.185s] -- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/share/ament_index/resource_index/package_run_dependencies/detect_and_solve
+[6.186s] -- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/share/ament_index/resource_index/parent_prefix_path/detect_and_solve
+[6.188s] -- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/share/detect_and_solve/environment/ament_prefix_path.sh
+[6.188s] -- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/share/detect_and_solve/environment/ament_prefix_path.dsv
+[6.189s] -- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/share/detect_and_solve/environment/path.sh
+[6.189s] -- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/share/detect_and_solve/environment/path.dsv
+[6.189s] -- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/share/detect_and_solve/local_setup.bash
+[6.190s] -- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/share/detect_and_solve/local_setup.sh
+[6.190s] -- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/share/detect_and_solve/local_setup.zsh
+[6.191s] -- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/share/detect_and_solve/local_setup.dsv
+[6.192s] -- Symlinking: /home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/share/detect_and_solve/package.dsv
+[6.224s] -- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/share/ament_index/resource_index/packages/detect_and_solve
+[6.226s] -- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/share/detect_and_solve/cmake/detect_and_solveConfig.cmake
+[6.226s] -- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/share/detect_and_solve/cmake/detect_and_solveConfig-version.cmake
+[6.226s] -- Up-to-date symlink: /home/leoxia/Code/XJTU-RMV-Task05/src/install/detect_and_solve/share/detect_and_solve/package.xml
+[6.229s] Invoked command in '/home/leoxia/Code/XJTU-RMV-Task05/src/build/detect_and_solve' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/leoxia/Code/XJTU-RMV-Task05/src/build/detect_and_solve
